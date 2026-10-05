@@ -1,6 +1,7 @@
 package com.refaccionaria.auth.controller;
 
 import com.refaccionaria.auth.dto.AuthDtos.MessageResponse;
+import com.refaccionaria.auth.exception.DuplicateCustomerException;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,11 @@ public class ApiExceptionHandler {
     @ExceptionHandler(IllegalArgumentException.class)
     ResponseEntity<MessageResponse> badRequest(IllegalArgumentException ex) {
         return ResponseEntity.badRequest().body(new MessageResponse(ex.getMessage()));
+    }
+
+    @ExceptionHandler(DuplicateCustomerException.class)
+    ResponseEntity<MessageResponse> duplicateCustomer(DuplicateCustomerException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(new MessageResponse(ex.getMessage()));
     }
 
     @ExceptionHandler(BadCredentialsException.class)

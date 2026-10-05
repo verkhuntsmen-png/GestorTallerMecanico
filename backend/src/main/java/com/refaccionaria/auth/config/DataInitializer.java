@@ -17,7 +17,10 @@ public class DataInitializer {
     CommandLineRunner seedData(RoleRepository roles, UserRepository users, PasswordEncoder encoder) {
         return args -> {
             Role admin = ensureRole(roles, "ADMINISTRADOR", "Control total del sistema",
-                    Set.of("SECURITY_MANAGE_ROLES", "USERS_READ", "USERS_WRITE", "ORDERS_READ", "ORDERS_WRITE"));
+                    Set.of("SECURITY_MANAGE_ROLES", "USERS_READ", "USERS_WRITE", "ORDERS_READ", "ORDERS_WRITE",
+                            "CLIENTS_READ", "CLIENTS_WRITE"));
+            ensureRole(roles, "RECEPCIONISTA", "Registro y consulta de clientes del taller",
+                    Set.of("CLIENTS_READ", "CLIENTS_WRITE"));
             ensureRole(roles, "CLIENTE", "Consulta sus ordenes y solicitudes",
                     Set.of("ORDERS_READ_OWN", "PROFILE_WRITE"));
             ensureRole(roles, "MECANICO", "Gestion tecnica de reparaciones",
@@ -37,7 +40,10 @@ public class DataInitializer {
     }
 
     private Role ensureRole(RoleRepository roles, String name, String description, Set<String> permissions) {
-        return roles.findByNameIgnoreCase(name).orElseGet(() -> {
+        return roles.findByNameIgnoreCase(name).map(role -> {
+            role.getPermissions().addAll(permissions);
+            return roles.save(role);
+        }).orElseGet(() -> {
             Role role = new Role();
             role.setName(name);
             role.setDescription(description);

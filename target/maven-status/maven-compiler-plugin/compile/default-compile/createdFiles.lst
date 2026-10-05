@@ -4,8 +4,8 @@ com/refaccionaria/auth/dto/AuthDtos$LoginRequest.class
 com/refaccionaria/auth/service/UserDetailsServiceImpl.class
 com/refaccionaria/auth/security/JwtAuthenticationFilter.class
 com/refaccionaria/auth/dto/AuthDtos$MessageResponse.class
-com/refaccionaria/auth/RefaccionariaApplication.class
 com/refaccionaria/auth/repository/RoleRepository.class
+com/refaccionaria/auth/RefaccionariaApplication.class
 com/refaccionaria/auth/dto/AuthDtos$RoleRequest.class
 com/refaccionaria/auth/config/DataInitializer.class
 com/refaccionaria/auth/repository/UserRepository.class

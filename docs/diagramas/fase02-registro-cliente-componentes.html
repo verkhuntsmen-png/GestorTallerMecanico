@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitectura de componentes - Fase 02</title>
+    <style>
+      :root {
+        --ink: #17251d; --muted: #657469; --canvas: #f4f7f3; --line: #d7e1d6;
+        --vue: #2d7d51; --vue-soft: #e7f4eb; --facade: #197b82; --facade-soft: #e4f5f5;
+        --service: #536f9f; --service-soft: #e9eef8; --repo: #a2611c; --repo-soft: #fff0df;
+        --data: #505a54; --data-soft: #edf0ed; --auth: #9b3b64; --auth-soft: #fae9f0;
+        font-family: Arial, sans-serif; color: var(--ink); background: var(--canvas);
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; background: var(--canvas); }
+      .page { width: min(100% - 32px, 1240px); margin: 0 auto; padding: 30px 0 48px; }
+      .hero { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 24px; }
+      .eyebrow { margin: 0 0 7px; color: #c15c0d; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(25px, 4vw, 38px); line-height: 1.1; }
+      .hero p { max-width: 590px; margin: 10px 0 0; color: var(--muted); line-height: 1.55; }
+      .badge { border: 1px solid #bad7c1; border-radius: 999px; background: #eaf6ed; color: #21633c; padding: 8px 12px; font-size: 12px; font-weight: 800; }
+      .diagram { display: grid; gap: 14px; }
+      .layer { border: 1px solid var(--line); border-radius: 10px; background: white; box-shadow: 0 10px 30px rgb(26 45 33 / 6%); overflow: hidden; }
+      .layer__head { display: flex; align-items: center; gap: 9px; padding: 12px 15px; color: white; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+      .layer__icon { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid rgb(255 255 255 / 35%); border-radius: 5px; font-size: 12px; }
+      .layer__body { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 12px; padding: 14px; }
+      .vue .layer__head { background: var(--vue); } .facade .layer__head { background: var(--facade); }
+      .service .layer__head { background: var(--service); } .repository .layer__head { background: var(--repo); }
+      .data .layer__head { background: var(--data); }
+      .node { min-height: 104px; border: 1px solid var(--line); border-radius: 7px; padding: 13px; background: white; }
+      .node__label { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+      .node h2 { margin: 0; font-size: 15px; line-height: 1.3; }
+      .node p { margin: 7px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+      .vue .node__label { color: var(--vue); } .facade .node__label { color: var(--facade); }
+      .service .node__label { color: var(--service); } .repository .node__label { color: var(--repo); }
+      .data .node__label { color: var(--data); }
+      .flow { display: grid; gap: 8px; grid-template-columns: 1fr; margin: 2px 0; }
+      .flow__line { display: flex; align-items: center; justify-content: center; gap: 9px; color: var(--muted); font-size: 12px; font-weight: 700; }
+      .flow__arrow { color: #b76517; font-size: 21px; line-height: 1; }
+      .routes { display: grid; gap: 14px; grid-template-columns: 1fr; margin-top: 22px; }
+      .route { border-radius: 9px; padding: 16px; }
+      .route--auth { border: 1px solid #ebc6d5; background: var(--auth-soft); }
+      .route--customer { border: 1px solid #cce3d1; background: var(--vue-soft); }
+      .route h2 { margin: 0; font-size: 15px; }
+      .route p { margin: 5px 0 12px; color: var(--muted); font-size: 13px; }
+      .route__steps { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+      .route__step { border: 1px solid rgb(23 37 29 / 12%); border-radius: 5px; background: rgb(255 255 255 / 82%); padding: 7px 9px; font-size: 12px; font-weight: 800; }
+      .route__arrow { color: #b76517; font-weight: 800; }
+      .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+      .legend span { display: inline-flex; align-items: center; gap: 6px; }
+      .dot { width: 10px; height: 10px; border-radius: 50%; }
+      .note { margin-top: 20px; border-left: 3px solid #d27724; padding: 2px 0 2px 11px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+      @media (min-width: 760px) {
+        .page { width: min(100% - 56px, 1240px); padding-top: 42px; }
+        .flow { grid-template-columns: repeat(3, 1fr); gap: 0; }
+        .flow__line:not(:last-child)::after { content: ""; width: 100%; height: 1px; margin-left: 10px; background: #cbd6ca; }
+        .routes { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Gestor de Taller Mecánico / Refaccionaria</p>
+          <h1>Componentes de acceso y registro de cliente</h1>
+          <p>Fase 02. Mapa de capas que mantiene Vue separado de la lógica de negocio mediante Facade y del acceso a datos mediante Repository.</p>
+        </div>
+        <span class="badge">RESTful · JWT · RBAC · MySQL</span>
+      </header>
+
+      <section class="diagram" aria-label="Arquitectura por capas">
+        <section class="layer vue">
+          <div class="layer__head"><span class="layer__icon">V</span> Capa de presentación - Vue</div>
+          <div class="layer__body">
+            <article class="node"><span class="node__label">Vista</span><h2>Login y Registro</h2><p>Formularios, estados de carga y mensajes de autenticación.</p></article>
+            <article class="node"><span class="node__label">Vista</span><h2>Registro de Cliente</h2><p>Formulario multipart, validación de experiencia y alerta de alta.</p></article>
+            <article class="node"><span class="node__label">Adaptador HTTP</span><h2>api()</h2><p>Único punto Vue para solicitudes REST y encabezado Bearer.</p></article>
+          </div>
+        </section>
+
+        <div class="flow" aria-hidden="true">
+          <div class="flow__line"><span class="flow__arrow">↓</span> JSON o multipart/form-data</div>
+          <div class="flow__line"><span class="flow__arrow">↓</span> Authorization: Bearer JWT</div>
+          <div class="flow__line"><span class="flow__arrow">↓</span> DTO validado</div>
+        </div>
+
+        <section class="layer facade">
+          <div class="layer__head"><span class="layer__icon">F</span> Capa Facade</div>
+          <div class="layer__body">
+            <article class="node"><span class="node__label">Autenticación</span><h2>AuthFacade</h2><p>Puerta de entrada para login, registro, perfil y recuperación.</p></article>
+            <article class="node"><span class="node__label">Clientes</span><h2>CustomerFacade</h2><p>Orquesta validación de negocio, duplicados, foto y auditoría.</p></article>
+          </div>
+        </section>
+
+        <section class="layer service">
+          <div class="layer__head"><span class="layer__icon">S</span> Servicios y seguridad</div>
+          <div class="layer__body">
+            <article class="node"><span class="node__label">Servicio</span><h2>AuthService y JwtService</h2><p>BCrypt, emisión/validación JWT y control de intentos.</p></article>
+            <article class="node"><span class="node__label">Servicio</span><h2>CustomerPhotoStorageService</h2><p>Verifica firma, tamaño y persiste JPEG, PNG o WEBP con UUID.</p></article>
+            <article class="node"><span class="node__label">Seguridad</span><h2>Spring Security</h2><p>Filtro JWT y autorización por roles/permisos, incluido CLIENTS_WRITE.</p></article>
+          </div>
+        </section>
+
+        <section class="layer repository">
+          <div class="layer__head"><span class="layer__icon">R</span> Capa Repository</div>
+          <div class="layer__body">
+            <article class="node"><span class="node__label">JPA</span><h2>UserRepository y RoleRepository</h2><p>Usuarios, roles y permisos parametrizados.</p></article>
+            <article class="node"><span class="node__label">JPA</span><h2>CustomerRepository</h2><p>Persistencia y comprobaciones de identidad/contacto duplicado.</p></article>
+            <article class="node"><span class="node__label">JPA</span><h2>PasswordResetTokenRepository</h2><p>Tokens de recuperación protegidos por hash.</p></article>
+          </div>
+        </section>
+
+        <section class="layer data">
+          <div class="layer__head"><span class="layer__icon">D</span> Datos y almacenamiento</div>
+          <div class="layer__body">
+            <article class="node"><span class="node__label">MySQL</span><h2>Base de datos refaccionaria</h2><p>users, roles, customers, tokens y restricciones únicas.</p></article>
+            <article class="node"><span class="node__label">Sistema de archivos</span><h2>uploads/customer-photos</h2><p>Fotografías no versionadas y con nombre generado por el servidor.</p></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="routes" aria-label="Flujos principales">
+        <article class="route route--auth">
+          <h2>Flujo de autenticación</h2>
+          <p>Login y registro mantienen su recorrido a través de la fachada de autenticación.</p>
+          <div class="route__steps"><span class="route__step">Vue Login/Registro</span><span class="route__arrow">→</span><span class="route__step">AuthFacade</span><span class="route__arrow">→</span><span class="route__step">AuthService/JWT</span><span class="route__arrow">→</span><span class="route__step">UserRepository</span><span class="route__arrow">→</span><span class="route__step">MySQL</span></div>
+        </article>
+        <article class="route route--customer">
+          <h2>Flujo de alta de cliente</h2>
+          <p>Solo una sesión con permiso CLIENTS_WRITE puede completar el alta.</p>
+          <div class="route__steps"><span class="route__step">Vue Cliente</span><span class="route__arrow">→</span><span class="route__step">JWT/RBAC</span><span class="route__arrow">→</span><span class="route__step">CustomerFacade</span><span class="route__arrow">→</span><span class="route__step">Repository + Foto</span><span class="route__arrow">→</span><span class="route__step">MySQL/Archivos</span></div>
+        </article>
+      </section>
+
+      <footer class="legend">
+        <span><i class="dot" style="background:var(--vue)"></i>Vue</span><span><i class="dot" style="background:var(--facade)"></i>Facade</span><span><i class="dot" style="background:var(--service)"></i>Servicios</span><span><i class="dot" style="background:var(--repo)"></i>Repository</span><span><i class="dot" style="background:var(--data)"></i>Datos</span>
+      </footer>
+      <p class="note">Las flechas representan dependencias y solicitudes controladas. La vista no accede directamente a servicios ni repositorios; las fachadas delimitan los casos de uso.</p>
+    </main>
+  </body>
+</html>

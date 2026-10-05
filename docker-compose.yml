@@ -1,4 +1,13 @@
 services:
+  sepomex-api:
+    image: icalia/sepomex:latest
+    container_name: taller_sepomex_api
+    ports:
+      - "3005:80"
+    environment:
+      - SECRET_KEY_BASE=un_secret_key_de_prueba_12345
+    restart: always
+
   mysql:
     image: mysql:latest
     container_name: refaccionaria-mysql

@@ -1,0 +1,24 @@
+flowchart LR
+    operator["Usuario autenticado<br/>ADMINISTRADOR o RECEPCIONISTA"]
+    ui["Vue: formulario de cliente<br/>FormData + alerta"]
+    security["Spring Security<br/>JWT + PERM_CLIENTS_WRITE"]
+    controller["CustomerController<br/>POST /api/customers"]
+    facade["CustomerFacade<br/>validacion, no duplicidad<br/>orquestacion"]
+    userRepo["UserRepository"]
+    customerRepo["CustomerRepository<br/>restricciones unicas"]
+    storage["CustomerPhotoStorageService<br/>JPEG/PNG/WEBP, max 15 MB"]
+    db[("MySQL<br/>customers / users")]
+    photos[("Almacenamiento local<br/>uploads/customer-photos")]
+    future["Futuro: Empresa -> Talleres<br/>Cliente asociado a una empresa<br/>y varios talleres de esa empresa"]
+
+    operator --> ui
+    ui -->|"Bearer JWT + multipart/form-data"| security
+    security --> controller
+    controller --> facade
+    facade --> userRepo
+    facade --> customerRepo
+    facade --> storage
+    userRepo --> db
+    customerRepo --> db
+    storage --> photos
+    customerRepo -. "extension futura" .-> future

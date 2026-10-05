@@ -1,6 +1,7 @@
 package com.refaccionaria.auth.config;
 
 import com.refaccionaria.auth.security.JwtAuthenticationFilter;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -44,6 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/auth/register", "/api/auth/login",
                                 "/api/auth/forgot-password", "/api/auth/reset-password").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/customers").hasAuthority("PERM_CLIENTS_WRITE")
                         .requestMatchers("/api/roles/**").hasAuthority("PERM_SECURITY_MANAGE_ROLES")
                         .anyRequest().authenticated()
                 )
@@ -69,9 +71,12 @@ public class SecurityConfig {
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource(@Value("${app.security.cors-origin}") String origin) {
+    public CorsConfigurationSource corsConfigurationSource(@Value("${app.security.cors-origin}") String origins) {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of(origin));
+        config.setAllowedOrigins(Arrays.stream(origins.split(","))
+                .map(String::trim)
+                .filter(origin -> !origin.isBlank())
+                .toList());
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
