@@ -1,3 +1,27 @@
+# Archivos generados por la aplicacion y las compilaciones
 uploads/
 target/
+backend/target/
 frontend/dist/
+frontend/node_modules/
+
+# Configuracion local: puede contener credenciales y claves privadas.
+# Los archivos .example se conservan como plantilla segura para el equipo.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Registros y certificados/llaves locales
+*.log
+*.pem
+*.key
+*.p12
+*.jks
+
+# Configuracion de editores y del sistema operativo
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
