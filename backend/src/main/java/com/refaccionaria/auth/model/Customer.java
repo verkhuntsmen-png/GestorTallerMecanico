@@ -3,11 +3,15 @@ package com.refaccionaria.auth.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.ForeignKey;
+import jakarta.persistence.ConstraintMode;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import java.time.Instant;
@@ -54,6 +58,20 @@ public class Customer {
     private String state;
     @Column(nullable = false, length = 5)
     private String postalCode;
+    @Column(length = 13)
+    private String rfc;
+    @Column(length = 18)
+    private String curp;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 12)
+    private CustomerStatus status = CustomerStatus.ACTIVO;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "status_id")
+    private Estatus estatus;
+    // New writes require a workshop at DTO level; nullable keeps historic customer rows migratable.
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "taller_id", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    private Taller taller;
     @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -91,6 +109,16 @@ public class Customer {
     public void setState(String state) { this.state = state; }
     public String getPostalCode() { return postalCode; }
     public void setPostalCode(String postalCode) { this.postalCode = postalCode; }
+    public String getRfc() { return rfc; }
+    public void setRfc(String rfc) { this.rfc = rfc; }
+    public String getCurp() { return curp; }
+    public void setCurp(String curp) { this.curp = curp; }
+    public CustomerStatus getStatus() { return status; }
+    public void setStatus(CustomerStatus status) { this.status = status; }
+    public Estatus getEstatus() { return estatus; }
+    public void setEstatus(Estatus estatus) { this.estatus = estatus; }
+    public Taller getTaller() { return taller; }
+    public void setTaller(Taller taller) { this.taller = taller; }
     public Instant getCreatedAt() { return createdAt; }
     public AppUser getCreatedBy() { return createdBy; }
     public void setCreatedBy(AppUser createdBy) { this.createdBy = createdBy; }

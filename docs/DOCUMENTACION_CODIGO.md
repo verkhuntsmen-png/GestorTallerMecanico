@@ -23,7 +23,7 @@ El frontend no accede a repositorios ni a MySQL. `CustomerController` depende de
 | --- | --- |
 | `frontend/src/App.vue` | Vista unica de login, registro, recuperacion, sesion y alta de clientes. Mantiene el estado de los formularios y coordina los servicios HTTP. |
 | `frontend/src/services/sepomex.js` | Adaptador de lectura para el catalogo SEPOMEX; concentra URL base, respaldo y transformacion de colecciones. |
-| `frontend/src/style.css` | Base global: tipografia Manrope, fondo oscuro y foco accesible. |
+| `frontend/src/style.css` | Base global: tipografia Manrope, fondo crema neutro y foco accesible. |
 | `frontend/.env.example` | Ejemplo de `VITE_SEPOMEX_API_URL=http://localhost:3005`. |
 | `frontend/vite.config.js` | Proxy de desarrollo para `/api` hacia Spring Boot en `http://localhost:8080`. |
 
@@ -130,7 +130,7 @@ La aplicacion permite captura manual de estado, municipio y colonia si el catalo
 .requestMatchers(HttpMethod.POST, "/api/customers").hasAuthority("PERM_CLIENTS_WRITE")
 ```
 
-No hay anotaciones `@PreAuthorize` en el modulo actual; la proteccion se resuelve por reglas de rutas. `DataInitializer` concede `CLIENTS_WRITE` a los roles base `ADMINISTRADOR` y `RECEPCIONISTA`.
+El modulo base protege rutas mediante `SecurityFilterChain`; UC-CV-02 agrega anotaciones `@PreAuthorize` para separar lectura, edicion y suspension. `DataInitializer` concede `CLIENTS_WRITE` a los roles base `ADMINISTRADOR` y `RECEPCIONISTA`.
 
 ## 4. Infraestructura
 
@@ -156,3 +156,89 @@ La imagen actual `icalia/sepomex:latest` escucha internamente en `80`; por ello 
 - La pertenencia de un cliente a varios talleres de una misma empresa queda pendiente de las entidades de empresa, taller y tabla de enlace.
 - La aplicacion no incluye pruebas automatizadas para el modulo de cliente o el servicio Sepomex.
 - El diagrama se entrega en HTML independiente. La CLI de Archify no se encontro localmente y `npx archify --help` no obtuvo un ejecutable publicable.
+
+## 7. Extension multitaller y UC-CV-02
+
+### 7.1 Talleres
+
+El modulo se compone de `Taller`, `TallerRepository`, `TallerFacade`, `TallerPhotoStorageService`,
+`TallerController` y sus DTOs. Hibernate crea o actualiza la tabla `talleres` a partir de la entidad. La entidad
+guarda identidad fiscal, datos de contacto, direccion, fotografia, bandera `activo` y marca de creacion.
+
+`POST /api/v1/talleres` recibe `multipart/form-data`. La foto es obligatoria, tiene un limite efectivo de 15 MB y
+se verifica contra firmas binarias JPEG, PNG o WEBP antes de persistirse. RFC y razon social se verifican antes de
+guardar y tambien tienen restricciones unicas en MySQL. El RFC usa la expresion solicitada:
+
+```text
+^([A-ZÑ&]{3,4})([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])([A-Z0-9]{3})$
+```
+
+`GET /api/v1/talleres` devuelve exclusivamente talleres activos, ordenados por nombre, para los selectores de
+clientes. El alta de talleres se protege con `@PreAuthorize("hasRole('ADMIN')")`.
+
+### 7.2 Cliente ampliado
+
+`Customer` ahora contiene RFC opcional, CURP obligatoria validada, estado (`ACTIVO` o `SUSPENDIDO`) y una relacion
+`@ManyToOne` obligatoria con `Taller` mediante `taller_id`. `CustomerRegistrationRequest` recibe los mismos
+campos; `CustomerUpdateRequest` es el contrato JSON para edicion, sin reemplazar la fotografia ya almacenada.
+
+La CURP se valida con una expresion que comprueba estructura, fecha, sexo, entidad federativa y homoclave. El
+frontend replica RFC/CURP y limite de foto como retroalimentacion temprana, pero Spring Boot conserva la validacion
+autoritativa.
+
+### 7.3 Endpoints UC-CV-02
+
+| Metodo y ruta | Regla | Implementacion |
+| --- | --- | --- |
+| `GET /api/v1/clientes?tallerId=&page=0&size=10&sortBy=nombre&sortDir=asc` | Lectura con `CLIENTS_READ` o `CLIENTS_WRITE`. | `ClienteController` delega a `CustomerFacade.list`; `PageRequest` limita tamano a 10 y genera el `ORDER BY fullName` y `LIMIT/OFFSET` en MySQL. |
+| `PUT /api/v1/clientes/{id}` | Requiere `PERM_CLIENTS_WRITE`. | Actualiza datos de cliente y permite reasignar solo a un taller activo. |
+| `PUT /api/v1/clientes/{id}/suspender` | Exclusivo `@PreAuthorize("hasRole('ADMIN')")`. | Ruta de compatibilidad que cambia el estado a `SUSPENDIDO`; no elimina el historial. |
+| `PUT /api/v1/clientes/{id}/estatus?statusId={id}` | Exclusivo `@PreAuthorize("hasRole('ADMIN')")`. | Actualiza `Customer.estatus` con un registro activo del catalogo y permite tanto suspender como reactivar mediante la seleccion de Activo. |
+
+El rol legado `ADMINISTRADOR` recibe tambien la autoridad estandar `ROLE_ADMIN` al autenticarse. Esto conserva los
+roles existentes y permite que la restriccion solicitada use exactamente `hasRole('ADMIN')`.
+
+### 7.4 Frontend
+
+`App.vue` sigue siendo el componente raiz existente. Su barra lateral ahora ofrece **Administracion: Talleres** y
+**Administracion: Clientes (UC-CV-02)**. El formulario de talleres aplica validacion de RFC, correo y foto antes de
+enviar `FormData`. El formulario de clientes agrega RFC, CURP y selector de taller; al elegir **Editar**, reutiliza
+la misma pantalla para ejecutar `PUT` y permite reasignar el taller.
+
+La tabla consume paginacion del servidor, filtra por taller, alterna A-Z/Z-A y muestra las acciones autorizadas por
+perfil. Para administradores, **Estado** abre un modal con los estatus activos del catalogo; al confirmar, llama al
+endpoint de cambio de estado. Asi, Activo permite reactivar un cliente suspendido y Suspendido conserva la suspension
+logica sin eliminar registros. El diseno conserva el fondo crema `#FAF8F5`, tarjetas blancas y acentos warm sunset.
+
+### 7.5 Verificacion adicional
+
+- `./mvnw test -q`: compilacion y pruebas de Maven completadas.
+- `yarn build`: compilacion de Vue/Vite completada.
+- La actualizacion del esquema se realiza con `spring.jpa.hibernate.ddl-auto=update` al arrancar Spring Boot.
+
+## 8. UC-CV-06: vehiculos y catalogos
+
+`Estatus` es un catalogo configurable con valor unico, descripcion y bandera `activo`. Se relaciona mediante
+`status_id` con `Customer` y `Vehiculo`; las transiciones Suspendido/Activo actualizan la referencia sin borrar
+datos. `EstatusController` expone CRUD administrativo en `/api/v1/estatus` y requiere `ROLE_ADMIN`.
+
+Al iniciar, `DataInitializer` lee `backend/src/main/resources/data/vehiculos_normalizado.csv` cuando `modelo` esta
+vacio. Crea `Marca` por nombre unico y `Modelo` unico por marca; conserva combustible, cilindros y transmision como
+sugerencias tecnicas para el formulario. Las rutas de consulta son `GET /api/v1/vehiculos/marcas` y
+`GET /api/v1/vehiculos/marcas/{marcaId}/modelos`.
+
+`Vehiculo` almacena VIN unico, placa normalizada a mayusculas, marca, modelo, anio, ficha tecnica, cliente y estatus.
+`POST /api/v1/vehiculos` permite `ROLE_ADMIN` y `ROLE_RECEPCIONISTA`; rechaza VIN duplicado, VIN fuera de
+`^[A-HJ-NPR-Z0-9]{17}$`, placas fuera de `^[A-Z0-9]{3,4}-?[A-Z0-9]{2,4}$` y clientes cuyo estatus no sea Activo.
+La peticion puede incluir `nuevaMarca` y `nuevoModelo` cuando el catalogo no contenga la opcion requerida.
+
+En UC-CV-02, recepcionista y administrador pueden editar los datos personales. La reasignacion de `tallerId` se
+verifica en backend con las autoridades del JWT y el selector se deshabilita visualmente para recepcionista.
+
+### 8.1 Cambio de estado de cliente
+
+`EstatusFacade#listActive` y `EstatusFacade#activeById` exponen solamente opciones habilitadas del catalogo.
+`CustomerFacade#updateStatus` asigna el `Estatus` seleccionado a `Customer.estatus` y conserva sincronizado el
+campo legado `CustomerStatus` para las opciones Activo y Suspendido. La vista administra este flujo con
+`openCustomerStatusModal` y `updateCustomerStatus` en `App.vue`; el modal no ofrece estatus inactivos y se cierra
+solo despues de una actualizacion satisfactoria.

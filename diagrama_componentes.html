@@ -3,109 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagrama de componentes | Gestor de Taller</title>
+    <title>Diagrama de arquitectura | Gestor de Taller</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
     <style>
       :root {
-        --ink: #1f1720;
-        --muted: #685d67;
-        --canvas: #fff8f7;
-        --panel: #ffffff;
-        --line: #f2d9df;
-        --rose: #e05d78;
-        --fuchsia: #be5d9e;
-        --amber: #e58a55;
-        --slate: #263140;
-        font-family: Arial, sans-serif;
+        --canvas: #fdfbf7;
+        --ink: #30272d;
+        --muted: #72666d;
+        --line: #eadde1;
+        --rose: #dd5e78;
+        --fuchsia: #b85d98;
+        --orange: #df8654;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--ink);
         background: var(--canvas);
       }
+
       * { box-sizing: border-box; }
-      body { margin: 0; min-width: 320px; }
-      .page { width: min(100% - 32px, 1180px); margin: 0 auto; padding: 36px 0 52px; }
-      header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 30px; }
-      .eyebrow { margin: 0 0 8px; color: var(--rose); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-      h1 { margin: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; }
-      header p:not(.eyebrow) { max-width: 620px; margin: 12px 0 0; color: var(--muted); line-height: 1.55; }
-      .badge { border: 1px solid #f3cbd5; border-radius: 999px; background: #fff0f3; color: #9d3c59; padding: 9px 13px; font-size: 12px; font-weight: 800; }
-      .flow { display: grid; gap: 16px; }
-      .node { position: relative; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); box-shadow: 0 16px 35px rgb(83 35 48 / 8%); overflow: hidden; }
-      .node__bar { height: 7px; background: linear-gradient(90deg, var(--rose), var(--fuchsia), var(--amber)); }
-      .node__body { padding: 20px; }
-      .node__top { display: flex; align-items: center; gap: 11px; }
-      .icon { display: grid; place-items: center; flex: 0 0 auto; width: 38px; height: 38px; border-radius: 10px; background: #fff0f3; color: var(--rose); font-size: 18px; }
-      .node h2 { margin: 0; font-size: 19px; }
-      .node p { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
-      .parts { display: grid; gap: 9px; margin-top: 16px; }
-      .part { border: 1px solid #f4e1e5; border-radius: 9px; background: #fffafb; padding: 10px 12px; font-size: 13px; font-weight: 700; }
-      .connector { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 28px; color: #aa536b; font-size: 12px; font-weight: 800; text-align: center; }
-      .connector::before, .connector::after { content: ''; flex: 1; max-width: 110px; height: 2px; background: linear-gradient(90deg, #efb1c0, #efb46d); }
-      .connector span { font-size: 21px; line-height: 1; }
-      .backend .node__bar { background: linear-gradient(90deg, #9f4d7d, #d76575, #e69559); }
-      .database .node__bar { background: linear-gradient(90deg, #516171, #a05d7c, #e38b58); }
-      .sepomex .node__bar { background: linear-gradient(90deg, #e38b58, #e05d78, #be5d9e); }
-      .endpoints { display: grid; gap: 9px; margin-top: 16px; }
-      code { border-radius: 5px; background: #f9e9ed; color: #9f3f59; padding: 3px 6px; font-family: monospace; font-size: 12px; }
-      .branches { display: grid; gap: 16px; }
-      .note { margin-top: 26px; border-left: 4px solid var(--rose); padding: 5px 0 5px 13px; color: var(--muted); font-size: 13px; line-height: 1.55; }
-      @media (min-width: 800px) {
-        .page { width: min(100% - 64px, 1180px); padding-top: 52px; }
-        .branches { grid-template-columns: 1fr 1fr; }
-        .branches .connector { grid-column: 1 / -1; }
-      }
+      body { min-width: 320px; margin: 0; background: var(--canvas); }
+      .page { width: min(100% - 32px, 1440px); margin: 0 auto; padding: 40px 0 52px; }
+      .header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+      .eyebrow { margin: 0 0 8px; color: var(--rose); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; }
+      .intro { max-width: 760px; margin: 12px 0 0; color: var(--muted); line-height: 1.55; }
+      .badge { border: 1px solid #efcfd8; border-radius: 999px; background: #fff0f3; color: #963c57; padding: 9px 13px; font-size: 12px; font-weight: 800; }
+      .diagram-shell { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: #fffefa; box-shadow: 0 20px 46px rgb(103 53 68 / 9%); padding: 22px; }
+      .mermaid { min-width: 1040px; }
+      .mermaid svg { min-width: 1040px; max-width: none; height: auto; }
+      .legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 18px 0; color: var(--muted); font-size: 13px; }
+      .legend span { display: inline-flex; align-items: center; gap: 7px; }
+      .dot { width: 10px; height: 10px; border-radius: 999px; }
+      .details { border: 1px solid var(--line); border-radius: 14px; background: #fff; padding: 16px 18px; box-shadow: 0 10px 26px rgb(103 53 68 / 6%); }
+      .details h2 { margin: 0; font-size: 16px; }
+      .details p { margin: 7px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+      .details strong { color: var(--ink); }
+      .note { margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+      @media (min-width: 768px) { .page { width: min(100% - 64px, 1440px); padding-top: 52px; } }
     </style>
   </head>
   <body>
     <main class="page">
-      <header>
+      <header class="header">
         <div>
           <p class="eyebrow">Gestor de Taller Mecanico / Refaccionaria</p>
-          <h1>Diagrama de componentes</h1>
-          <p>Flujo visual de la captura de clientes y el autocompletado de direccion con el catalogo nacional SEPOMEX.</p>
+          <h1>Arquitectura de clientes y vehiculos</h1>
+          <p class="intro">Sigue las flechas para entender la consulta, actualizacion y cambio de estado de vehiculos, desde la ficha hasta la auditoria persistente.</p>
         </div>
-        <span class="badge">Vue 3 · Spring Boot · MySQL · SEPOMEX</span>
+        <span class="badge">Haz clic en un componente para ver su funcion</span>
       </header>
 
-      <section class="flow" aria-label="Diagrama de componentes de la aplicacion">
-        <article class="node">
-          <div class="node__bar"></div>
-          <div class="node__body">
-            <div class="node__top"><span class="icon">&#128187;</span><div><h2>Cliente y Vue 3</h2><p>Pantalla de inicio, autenticacion y registro de cliente.</p></div></div>
-            <div class="parts"><div class="part">Formulario de cliente y fotografia</div><div class="part">Servicio Sepomex configurable por VITE_SEPOMEX_API_URL</div><div class="part">Solicitudes REST con sesion JWT</div></div>
-          </div>
-        </article>
+      <section class="diagram-shell" aria-label="Diagrama interactivo de arquitectura">
+        <pre class="mermaid">
+flowchart LR
+    subgraph EX[Experiencia]
+        U["Usuario / Cliente<br/>Operador autorizado"]
+    end
 
-        <div class="connector"><span>&darr;</span> datos de acceso y cliente</div>
+    subgraph FE[Frontend - Navegador]
+        V["Vue.js 3<br/>+ Tailwind CSS"]
+        F["Formularios<br/>Login, Clientes y Vehiculos"]
+        A["Cliente REST<br/>fetch + JWT"]
+        D["Direccion asistida<br/>CP, estado, municipio, colonia"]
+        V --> F --> A
+        F --> D
+    end
 
-        <article class="node backend">
-          <div class="node__bar"></div>
-          <div class="node__body">
-            <div class="node__top"><span class="icon">&#9881;</span><div><h2>Backend Spring Boot</h2><p>API REST que protege y procesa las operaciones del taller.</p></div></div>
-            <div class="parts"><div class="part">Controladores REST</div><div class="part">AuthFacade y CustomerFacade</div><div class="part">Servicios, JWT, RBAC y validaciones</div><div class="part">Repositories JPA</div></div>
-          </div>
-        </article>
+    subgraph BE[Backend - Spring Boot 3]
+        C["REST Controllers<br/>Auth, Clientes y Vehiculos"]
+        S["Spring Security<br/>JWT + RBAC"]
+        FA["Facades y servicios<br/>Auth / Customer / Vehiculo"]
+        AU["Auditoria de vehiculo<br/>Antes / despues / actor"]
+        R["Repositories JPA<br/>DTOs y validacion"]
+        P["Almacenamiento<br/>Fotos de clientes"]
+        C --> S --> FA --> R
+        FA --> AU --> R
+        FA --> P
+    end
 
-        <div class="connector"><span>&darr;</span> datos validados y persistencia</div>
+    subgraph INF[Infraestructura Docker]
+        DB[("MySQL 8<br/>Usuarios, clientes, vehiculos y auditoria")]
+        SE["API SEPOMEX<br/>Catalogo de direcciones<br/>localhost:3005"]
+    end
 
-        <section class="branches">
-          <article class="node database">
-            <div class="node__bar"></div>
-            <div class="node__body">
-              <div class="node__top"><span class="icon">&#128451;</span><div><h2>Base de datos MySQL</h2><p>Fuente de datos privada del taller.</p></div></div>
-              <div class="parts"><div class="part">Usuarios, roles y permisos</div><div class="part">Clientes y restricciones de duplicidad</div><div class="part">Ordenes y datos operativos futuros</div></div>
-            </div>
-          </article>
+    U -->|"Interaccion web"| V
+    A -->|"REST API + JWT"| C
+    R -->|"JPA / JDBC / SQL"| DB
+    D -->|"HTTP / JSON"| SE
 
-          <article class="node sepomex">
-            <div class="node__bar"></div>
-            <div class="node__body">
-              <div class="node__top"><span class="icon">&#128205;</span><div><h2>API SEPOMEX</h2><p>Catalogo de codigos postales de consulta publica y solo lectura.</p></div></div>
-              <div class="endpoints"><div><code>/api/v1/zip_codes</code> CP, estado, municipio y colonias</div><div><code>/api/v1/states</code> estados</div><div><code>/api/v1/states/:id/municipalities</code> municipios</div></div>
-            </div>
-          </article>
-        </section>
+    classDef user fill:#fff0f3,stroke:#dd5e78,color:#572735,stroke-width:2px;
+    classDef frontend fill:#fdf1fb,stroke:#b85d98,color:#48263f,stroke-width:2px;
+    classDef backend fill:#fff6ed,stroke:#df8654,color:#55331f,stroke-width:2px;
+    classDef data fill:#f4f2f5,stroke:#6e6670,color:#302a31,stroke-width:2px;
+    class U user;
+    class V,F,A,D frontend;
+    class C,S,FA,AU,R,P backend;
+    class DB,SE data;
+
+    style EX fill:#fffaf9,stroke:#f1c8d2,stroke-width:1px
+    style FE fill:#fffbff,stroke:#eacde2,stroke-width:1px
+    style BE fill:#fffdf8,stroke:#f0d1bb,stroke-width:1px
+    style INF fill:#faf9fb,stroke:#ded9e0,stroke-width:1px
+
+    click U call showUser() "Ver funcion"
+    click V call showFrontend() "Ver funcion"
+    click F call showForms() "Ver funcion"
+    click A call showApi() "Ver funcion"
+    click D call showAddress() "Ver funcion"
+    click C call showController() "Ver funcion"
+    click S call showSecurity() "Ver funcion"
+    click FA call showFacade() "Ver funcion"
+    click AU call showAudit() "Ver funcion"
+    click R call showRepository() "Ver funcion"
+    click P call showPhotos() "Ver funcion"
+    click DB call showDatabase() "Ver funcion"
+    click SE call showSepomex() "Ver funcion"
+        </pre>
       </section>
 
-      <p class="note">La aplicacion consulta SEPOMEX desde Vue para reducir errores tipograficos. Spring Boot conserva la responsabilidad de autenticar, autorizar, validar y guardar los datos propios del taller; MySQL no almacena el catalogo externo.</p>
+      <section class="legend" aria-label="Leyenda de componentes">
+        <span><i class="dot" style="background:#dd5e78"></i> Persona usuaria</span>
+        <span><i class="dot" style="background:#b85d98"></i> Frontend en navegador</span>
+        <span><i class="dot" style="background:#df8654"></i> Aplicacion Spring Boot</span>
+        <span><i class="dot" style="background:#6e6670"></i> Servicios y datos en Docker</span>
+      </section>
+
+      <aside class="details" aria-live="polite">
+        <h2 id="detail-title">Selecciona un componente</h2>
+        <p id="detail-text">Las flechas describen el protocolo usado en cada comunicacion: REST/JWT para la aplicacion, HTTP/JSON para SEPOMEX y JPA/JDBC/SQL para MySQL.</p>
+      </aside>
+
+      <p class="note">La API SEPOMEX se consulta directamente desde Vue para autocompletar direcciones. Spring Boot no mantiene actualmente un cliente interno hacia ese servicio.</p>
     </main>
+
+    <script>
+      const details = {
+        user: ['Usuario / Cliente', 'Un administrador o recepcionista autenticado interactua con el sistema desde el navegador.'],
+        frontend: ['Frontend Vue.js 3 + Tailwind CSS', 'Renderiza una experiencia responsive, conserva el estado de sesion y muestra solo las acciones permitidas por los permisos del JWT.'],
+        forms: ['Formularios', 'Reune autenticacion, clientes y vehiculos. La ficha de vehiculo abre modales de edicion y estado sin navegar a otra pagina.'],
+        api: ['Cliente REST', 'Usa fetch para enviar solicitudes JSON o multipart/form-data. Incluye el token Bearer JWT cuando la operacion requiere sesion.'],
+        address: ['Direccion asistida', 'Al capturar un codigo postal de cinco digitos consulta SEPOMEX; tambien permite seleccionar estado, municipio y colonia en cascada.'],
+        controller: ['REST Controllers', 'Los controladores de autenticacion, clientes y vehiculos reciben solicitudes HTTP y delegan los casos de uso sin acceder directamente a MySQL.'],
+        security: ['Spring Security', 'Valida JWT y autoridades. La alta de clientes requiere el permiso PERM_CLIENTS_WRITE.'],
+        facade: ['Facades y servicios', 'Los facades aplican reglas de negocio. VehiculoFacade conserva el VIN, valida datos y coordina el cambio de estado.'],
+        audit: ['Auditoria de vehiculo', 'Cada actualizacion y cambio de estado persiste el actor y las instantaneas JSON antes y despues, sin alterar ordenes cerradas.'],
+        repository: ['Repositories JPA', 'Los repositorios encapsulan consultas parametrizadas y persistencia. Los DTOs validan el contrato de entrada y salida.'],
+        photos: ['Almacenamiento de fotos', 'CustomerPhotoStorageService valida tamano y firma JPEG/PNG/WEBP; guarda el archivo con un nombre UUID.'],
+        database: ['MySQL 8', 'Conserva usuarios, roles, permisos, clientes, vehiculos y eventos de vehiculo_auditoria. Las restricciones unicas apoyan la prevencion de registros duplicados.'],
+        sepomex: ['API SEPOMEX', 'Servicio Docker de solo lectura publicado en localhost:3005. Proporciona estados, municipios, codigos postales y colonias.']
+      }
+
+      window.showInfo = (key) => {
+        const [title, text] = details[key] || details.user
+        document.getElementById('detail-title').textContent = title
+        document.getElementById('detail-text').textContent = text
+      }
+
+      window.showUser = () => window.showInfo('user')
+      window.showFrontend = () => window.showInfo('frontend')
+      window.showForms = () => window.showInfo('forms')
+      window.showApi = () => window.showInfo('api')
+      window.showAddress = () => window.showInfo('address')
+      window.showController = () => window.showInfo('controller')
+      window.showSecurity = () => window.showInfo('security')
+      window.showFacade = () => window.showInfo('facade')
+      window.showAudit = () => window.showInfo('audit')
+      window.showRepository = () => window.showInfo('repository')
+      window.showPhotos = () => window.showInfo('photos')
+      window.showDatabase = () => window.showInfo('database')
+      window.showSepomex = () => window.showInfo('sepomex')
+
+      mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        theme: 'base',
+        flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: false, nodeSpacing: 42, rankSpacing: 76 },
+        themeVariables: { fontFamily: 'Inter, Arial, sans-serif', primaryTextColor: '#30272d', lineColor: '#b68a95' }
+      })
+    </script>
   </body>
 </html>

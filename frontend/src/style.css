@@ -3,9 +3,9 @@
 
 :root {
   font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  color: #f1f5f9;
-  background: #020617;
-  color-scheme: dark;
+  color: #1f2937;
+  background: #faf8f5;
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -18,7 +18,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: #020617;
+  background: #faf8f5;
 }
 
 button,

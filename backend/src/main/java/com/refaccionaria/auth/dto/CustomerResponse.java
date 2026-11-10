@@ -18,6 +18,11 @@ public record CustomerResponse(
         String municipality,
         String state,
         String postalCode,
+        String rfc,
+        String curp,
+        Long tallerId,
+        String tallerNombre,
+        String status,
         Instant createdAt,
         String createdBy
 ) {

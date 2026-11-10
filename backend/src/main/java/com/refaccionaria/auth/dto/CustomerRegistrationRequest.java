@@ -12,6 +12,8 @@ import java.time.LocalDate;
 import org.springframework.web.multipart.MultipartFile;
 
 public class CustomerRegistrationRequest {
+    public static final String RFC = "^([A-ZÑ&]{3,4})([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])([A-Z0-9]{3})$";
+    public static final String CURP = "^[A-Z][AEIOUX][A-Z]{2}\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d]\\d$";
     private static final String PERSON_NAME = "^[\\p{L}]+(?:[\\p{L} ]*[\\p{L}])?$";
     private static final String PHONE = "^\\+?[1-9]\\d{7,14}$";
     private static final String ADDRESS = "^[\\p{L}0-9 .,#-]+$";
@@ -45,6 +47,12 @@ public class CustomerRegistrationRequest {
     private String state;
     @NotBlank @Pattern(regexp = "^\\d{5}$", message = "debe tener cinco digitos")
     private String postalCode;
+    @Pattern(regexp = RFC, message = "RFC mexicano invalido")
+    private String rfc;
+    @NotBlank @Pattern(regexp = CURP, message = "CURP mexicana invalida")
+    private String curp;
+    @NotNull
+    private Long tallerId;
 
     public String getFullName() { return fullName; }
     public void setFullName(String fullName) { this.fullName = fullName; }
@@ -74,4 +82,10 @@ public class CustomerRegistrationRequest {
     public void setState(String state) { this.state = state; }
     public String getPostalCode() { return postalCode; }
     public void setPostalCode(String postalCode) { this.postalCode = postalCode; }
+    public String getRfc() { return rfc; }
+    public void setRfc(String rfc) { this.rfc = rfc; }
+    public String getCurp() { return curp; }
+    public void setCurp(String curp) { this.curp = curp; }
+    public Long getTallerId() { return tallerId; }
+    public void setTallerId(Long tallerId) { this.tallerId = tallerId; }
 }

@@ -16,6 +16,7 @@ import com.refaccionaria.auth.security.JwtService;
 import jakarta.servlet.http.HttpServletRequest;
 import java.time.Instant;
 import java.util.Set;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -34,6 +35,7 @@ public class AuthService {
     private final LoginAttemptService attemptService;
     private final TokenHashService tokenHashService;
     private final AuthMapper mapper;
+    private final boolean exposePasswordResetToken;
 
     public AuthService(
             UserRepository userRepository,
@@ -44,7 +46,8 @@ public class AuthService {
             JwtService jwtService,
             LoginAttemptService attemptService,
             TokenHashService tokenHashService,
-            AuthMapper mapper
+            AuthMapper mapper,
+            @Value("${app.security.expose-password-reset-token:false}") boolean exposePasswordResetToken
     ) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
@@ -55,6 +58,7 @@ public class AuthService {
         this.attemptService = attemptService;
         this.tokenHashService = tokenHashService;
         this.mapper = mapper;
+        this.exposePasswordResetToken = exposePasswordResetToken;
     }
 
     @Transactional
@@ -102,10 +106,10 @@ public class AuthService {
     }
 
     @Transactional
-    public PasswordResetDevResponse forgotPassword(ForgotPasswordRequest request) {
+    public Object forgotPassword(ForgotPasswordRequest request) {
         var maybeUser = userRepository.findByEmailIgnoreCase(request.email().trim().toLowerCase());
         if (maybeUser.isEmpty()) {
-            return new PasswordResetDevResponse("Si el correo existe, se genero una liga de recuperacion", null);
+            return new MessageResponse("Si el correo existe, se genero una liga de recuperacion");
         }
 
         String rawToken = tokenHashService.newToken();
@@ -115,10 +119,13 @@ public class AuthService {
         token.setExpiresAt(Instant.now().plusSeconds(30 * 60));
         resetTokenRepository.save(token);
 
-        return new PasswordResetDevResponse(
-                "Token de recuperacion generado. En produccion se enviaria por correo.",
-                rawToken
-        );
+        if (exposePasswordResetToken) {
+            return new PasswordResetDevResponse(
+                    "Token de recuperacion generado. En produccion se enviaria por correo.",
+                    rawToken
+            );
+        }
+        return new MessageResponse("Si el correo existe, se genero una liga de recuperacion");
     }
 
     @Transactional

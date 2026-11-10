@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tsung SYSTEM "/usr/share/tsung/tsung-1.0.dtd">
+<tsung loglevel="notice" version="1.0">
+  <clients>
+    <client host="localhost" use_controller_vm="true" maxusers="1"/>
+  </clients>
+
+  <servers>
+    <server host="localhost" port="8081" type="tcp"/>
+  </servers>
+
+  <load>
+    <arrivalphase phase="1" duration="1" unit="second">
+      <users arrivalrate="1" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <sessions>
+    <session name="bloqueo-login-controlado" probability="100" type="ts_http">
+      <repeat name="cinco_intentos_incorrectos" max="5">
+        <request>
+          <http url="/api/auth/login"
+                method="POST"
+                version="1.1"
+                content_type="application/json"
+                contents='{"email":"qa.bloqueo@taller.test","password":"Incorrecta!2026"}'/>
+        </request>
+        <thinktime value="1"/>
+      </repeat>
+
+      <request>
+        <http url="/api/auth/login"
+              method="POST"
+              version="1.1"
+              content_type="application/json"
+              contents='{"email":"qa.bloqueo@taller.test","password":"QaBloqueo!2026"}'/>
+      </request>
+    </session>
+  </sessions>
+</tsung>

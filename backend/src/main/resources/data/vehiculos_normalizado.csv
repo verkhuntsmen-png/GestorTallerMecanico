@@ -1,0 +1,776 @@
+marca,modelo,tipo_combustible,numero_cilindros,tipo_transmision
+Acura,ADX ADVANCE,Gasolina,4L,Cvt
+Acura,ADX A SPEC,Gasolina,4L,Cvt
+Acura,INTEGRA TYPE S,Gasolina,4L,Mt
+Acura,INTEGRA INTEGRA,Gasolina,4L,Cvt
+Acura,INTEGRA A SPEC,Gasolina,4L,Cvt
+Acura,MDX TYPE S,Gasolina,6V,At
+Acura,MDX ADVANCE,Gasolina,6V,At
+Acura,RDX A SPEC,Gasolina,4L,At
+Acura,RDX ADVANCE,Gasolina,4L,At
+Acura,TLX TYPE S,Gasolina,6V,At
+Acura,TLX ADVANCE,Gasolina,4L,At
+Acura,TLX TYPE S,Gasolina,6V,At
+Acura,TLX ADVANCE,Gasolina,4L,At
+Avatr,AVATR 11 AWD,Eléctrico,0,0
+Avatr,AVATR 11 RWD,Eléctrico,0,0
+Avatr,AVATR 07 (REEV) AWD,Gasolina,4 en línea,Mecánica
+Avatr,AVATR 07 (REEV) RWD,Gasolina,4 en línea,Mecánica
+Alfa Romeo,"GIULIA (SPRINT, VELOCE, TRIBUTO ITALIANO)",Gasolina,4 EN LINEA,Automatico
+Alfa Romeo,"GIULIA (QV, QV SUPER SPORT)",Gasolina,6 EN V,Automatico
+Alfa Romeo,"STELVIO (SPRINT, VELOCE, TRIBUTO ITALIANO)",Gasolina,4 EN LINEA,Automatico
+Alfa Romeo,"STELVIO (QV, QV SUPER SPORT)",Gasolina,6 EN V,Automatico
+Alfa Romeo,"TONALE (SPRINT, TI, VELOCE)",Gasolina,4 EN LINEA,Automatico
+Audi,Q8,Híbrido,V6,Automatica
+Audi,Q2,Gasolina,4*,Automatica
+Audi,A1,Gasolina,3*,Automatica
+Audi,A1,Gasolina,4*,Automatica
+Audi,A3,Gasolina,4*,Automatica
+Audi,A4,Híbrido,4*,Automatica
+Audi,A5,Híbrido,4*,Automatica
+Audi,A5,Híbrido,4*,Automatica
+Audi,A5 SB,Híbrido,4*,Automatica
+Audi,A5 SB,Híbrido,4*,Automatica
+Audi,A6,Híbrido,V6,Automatica
+Audi,A6,Híbrido,4*,Automatica
+Audi,A6,Híbrido,4*,Automatica
+Audi,A7,Híbrido,V6,Automatica
+Audi,A7 SB,Híbrido,4*,Automatica
+Audi,A8,Híbrido,V6,Automatica
+Audi,A8 LWB,Híbrido,V8,Automatica
+Audi,RSQ8,Híbrido,V8,Automatica
+Audi,SQ7,Gasolina,V8,Automatica
+Audi,SQ8,Gasolina,V8,Automatica
+Audi,RS6,Híbrido,V8,Automatica
+Audi,S8,Híbrido,V8,Automatica
+Audi,RS7 SB,Híbrido,V8,Automatica
+Audi,S7 SB,Híbrido,V6,Automatica
+Audi,Q7,Híbrido,V6,Automatica
+Audi,S6,Híbrido,4*,Automatica
+Audi,SQ5 SB,Gasolina,V6,Automatica
+Audi,SQ5,Gasolina,V6,Automatica
+Audi,RS5 SB,Gasolina,V6,Automatica
+Audi,RS5,Gasolina,V6,Automatica
+Audi,RS5,Gasolina,V6,Automatica
+Audi,RS5 SB,Gasolina,V6,Automatica
+Audi,S5 SB,Gasolina,V6,Automatica
+Audi,S5,Gasolina,V6,Automatica
+Audi,Q8,Híbrido,V6,Automatica
+Audi,S4,Gasolina,V6,Automatica
+Audi,RS3,Gasolina,5*,Automatica
+Audi,Q7,Híbrido,V6,Automatica
+Audi,Q5,Híbrido,4*,Automatica
+Audi,Q5 SB,Híbrido,4*,Automatica
+Audi,Q3,Gasolina,4*,Automatica
+Audi,Q3 SB,Gasolina,4*,Automatica
+Audi,Q3,Gasolina,4*,Automatica
+Audi,Q3 SB,Gasolina,4*,Automatica
+Auteco,RICH 7,Eléctrico,sin dato,Automatica
+Auteco,RICH 6,Eléctrico,sin dato,Automatica
+Auteco,S50,Eléctrico,sin dato,Automatica
+Auteco,FORTHING F5,Eléctrico,sin dato,Automatica
+Baic,U5 PLUS,Gasolina,4 EN LINEA,Mt
+Baic,U5 PLUS,Gasolina,4 EN LINEA,Cvt
+Baic,X55,Gasolina,4 EN LINEA,Dct
+Baic,BJ30,Gasolina,4 EN LINEA,Dct
+Baic,X35 CVT,Gasolina,4 EN LINEA,Cvt
+Baic,X35 MT,Gasolina,4 EN LINEA,Manual
+Baic,X75,Gasolina,4 EN LINEA,Dct
+Baic,BJ40P,Gasolina,4 EN LINEA,At
+Baic,BJ40 PRO,Gasolina,4 EN LINEA,At
+Baic,BJ60,Gasolina,4 EN LINEA,At
+Baic,EU5,Eléctrico,0,At
+Baic,BJ30e 4x4,Híbrido,4 EN LINEA,Dht
+Baic,BJ30e 4x2,Híbrido,4 EN LINEA,Dht
+Bentley,BENTAYGA EWB V8 4.0 542HP AUTOMATICO TRACCION INTEGRAL,Gasolina,V8,Automatica
+Bentley,BENTAYGA V8 4.0 542HP AUTOMATICO TRACCION INTEGRAL,Gasolina,V8,Automatica
+Bentley,BENTAYGA HYBRID 3.0 335HP AUTOMATICO TRACCION INTEGRAL,Híbrido,V6,Automatica
+Buick,ENCORE GX,Gasolina,L3,Cvt
+Buick,ENCORE GX,Gasolina,L3,Cvt
+Buick,ENVISTA U,Gasolina,L3,Automática
+Buick,ENVISTA D,Gasolina,L3,Automática
+Buick,ENCLAVE B,Gasolina,L4,Automática
+Buick,ENVISION G,Gasolina,L4,Automática
+Buick,ENVISION F,Gasolina,L4,Automática
+Buick,ENCLAVE P,Gasolina,L4,Automática
+Build Your Dreams,BYD D1,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,DOLPHIN,Eléctrico,NO APLICA,Automatico
+Build Your Dreams,BYD DOLPHIN MINI 4 ASIENTOS,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,BYD DOLPHIN MINI 5 ASIENTOS,Eléctrico,NO APLICA,Directa
+Build Your Dreams,E5,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,HAN,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,YUAN PRO,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,SEAL (AWD),Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,SEALION 7,Eléctrico,NO APLICA,Automatico
+Build Your Dreams,TANG EV,Eléctrico,NO APLICA,Automatico
+Build Your Dreams,YUAN PLUS,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,YUAN PRO,Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,SEAL (RWD),Eléctrico,NO APLICA,Mecánica
+Build Your Dreams,SHARK DM-O **,Híbrido,4 en L,Automatico
+Build Your Dreams,KING DM-I,Híbrido,4 en L,Automatico
+Build Your Dreams,SONG PLUS DM-I,Híbrido,4 en L,Automatico
+Build Your Dreams,SONG PRO DM-I,Híbrido,4 en L,Automatico
+Cadillac,XT5 C,Gasolina,V6,Automática
+Cadillac,XT5 F,Gasolina,V6,Automática
+Cadillac,XT4 D,Gasolina,L4,Automática
+Cadillac,XT4 F,Gasolina,L4,Automática
+Cadillac,ESCALADE B,Gasolina,V8,Automática
+Cadillac,ESCALADE D,Gasolina,V8,Automática
+Cadillac,ESCALADE ESV B,Gasolina,V8,Automática
+Cadillac,ESCALADE ESV D,Gasolina,V8,Automática
+Cadillac,LYRIQ F,Eléctrico,sin dato,Eléctrica
+Cadillac,OPTIQ C,Eléctrico,sin dato,Eléctrica
+Cadillac,OPTIQ F,Eléctrico,sin dato,Eléctrica
+Changan,UNI-K,Gasolina,4 EN LINEA,Automatico
+Changan,ALSVIN 1.4 MT,Gasolina,4 EN LINEA,Manual
+Changan,ALSVIN 1.5 DCT,Gasolina,4 EN LINEA,Dct
+Changan,HUNTER PLUS AT 4X4,Gasolina,4 EN LINEA,Automatico
+Changan,CS35 PLUS 1.4 DCT,Gasolina,4 EN LINEA,Dct
+Changan,CS35 PLUS 1.6 CVT,Gasolina,4 EN LINEA,Cvt
+Changan,CS55 PLUS AT,Gasolina,4 EN LINEA,Automatico
+Changan,CS95 PLUS,Gasolina,4 en línea,Automática
+Changan,EADO PLUS iDD,Gasolina,4 en línea,Automática
+Changan,CS55 PLUS,Gasolina,4 en línea,Automática
+Changan,CS95 2WD,Gasolina,4 en línea,Automática
+Changan,EADO PLUS,Gasolina,4 en línea,Automática
+Changan,HONOR S,Gasolina,4 en línea,Manual
+Changan,NEW STAR TRUCK,Gasolina,4 en línea,Mt
+Changan,E07,Eléctrico,0,Mecánica
+Changan,HUNTER E REEV 4X2,Híbrido,4 en línea,Automática
+Changan,HUNTER E REEV 4X4,Híbrido,4 en línea,Automática
+Changan,CS75 PLUS 1.5 2WD,Gasolina,4 en línea,Automática
+Changan,CS75 PLUS 2.0 4WD,Gasolina,4 en línea,Automática
+Changan,UNI-K 2WD,Gasolina,4 en línea,Automática
+Changan,HUNTER PLUS 4X2 AT,Gasolina,4 en línea,Automática
+Changan,HUNTER PLUS 4X4 AT,Gasolina,4 en línea,Automática
+Changan,HUNTER PLUS 4X2 MT,Gasolina,4 en línea,Manual
+Changan,CS75,Gasolina,4 en línea,Automática
+Changan,HUNTER WORK,Gasolina,4 en línea,Manual
+Changan,HUNTER CHASIS,Gasolina,4 en línea,Manual
+Changan,CS35 PLUS,Gasolina,4 en línea,Automática
+Chevrolet,TRACKER,Gasolina,L3,Automática
+Chevrolet,TRACKER,Gasolina,L3,Automática
+Chevrolet,TRACKER,Gasolina,L3,Automática
+Chevrolet,TRACKER,Gasolina,L3,Manual
+Chevrolet,TRACKER,Gasolina,L3,Automática
+Chevrolet,MONTANA,Gasolina,L3,Automática
+Chevrolet,MONTANA,Gasolina,L3,Automática
+Chevrolet,TRAX,Gasolina,L3,Automática
+Chevrolet,TRAX,Gasolina,L3,Automática
+Chevrolet,TRAX,Gasolina,L3,Automática
+Chevrolet,CAPTIVA A,Gasolina,L4,Cvt
+Chevrolet,CAPTIVA B,Gasolina,L4,Cvt
+Chevrolet,CAPTIVA C,Gasolina,L4,Cvt
+Chevrolet,CAPTIVA D,Gasolina,L4,Cvt
+Chevrolet,GROOVE D,Gasolina,L4,Manual
+Chevrolet,GROOVE E,Gasolina,L4,Cvt
+Chevrolet,GROOVE F,Gasolina,L4,Cvt
+Chevrolet,AVEO A,Gasolina,L4,Manual
+Chevrolet,AVEO B,Gasolina,L4,Manual
+Chevrolet,AVEO G,Gasolina,L4,Manual
+Chevrolet,AVEO C,Gasolina,L4,Cvt
+Chevrolet,AVEO D,Gasolina,L4,Manual
+Chevrolet,AVEO E,Gasolina,L4,Manual
+Chevrolet,AVEO F,Gasolina,L4,Cvt
+Chevrolet,TORNADO VAN B,Gasolina,L4,Manual
+Chevrolet,S10 MAX A,Gasolina,L4,Manual
+Chevrolet,BLAZER F,Gasolina,V6,Automática
+Chevrolet,S10 MAX C,Gasolina,L4,Manual
+Chevrolet,S10 MAX D,Gasolina,L4,Manual
+Chevrolet,S10 MAX F,Gasolina,L4,Automática
+Chevrolet,SILVERADO A,Gasolina,L4,Automática
+Chevrolet,SILVERADO B,Gasolina,L4,Automática
+Chevrolet,SILVERADO N,Gasolina,V8,Automática
+Chevrolet,SILVERADO O,Gasolina,V8,Automática
+Chevrolet,SILVERADO E,Gasolina,L4,Automática
+Chevrolet,SILVERADO F,Gasolina,L4,Automática
+Chevrolet,SILVERADO N,Gasolina,V8,Automática
+Chevrolet,SILVERADO O,Gasolina,V8,Automática
+Chevrolet,CHEYENNE S,Gasolina,V8,Automática
+Chevrolet,SILVERADO K,Gasolina,V8,Automática
+Chevrolet,CHEYENNE C,Gasolina,V8,Automática
+Chevrolet,CHEYENNE H,Gasolina,V8,Automática
+Chevrolet,CHEYENNE B,Gasolina,V8,Automática
+Chevrolet,CHEYENNE D,Gasolina,V8,Automática
+Chevrolet,CHEYENNE R,Gasolina,V8,Automática
+Chevrolet,CHEYENNE G,Gasolina,V8,Automática
+Chevrolet,BLAZER B,Gasolina,V6,Automática
+Chevrolet,BLAZER C,Gasolina,V6,Automática
+Chevrolet,S10 MAX B,Gasolina,L4,Manual
+Chevrolet,BLAZER EV A,Eléctrico,sin dato,Electrica
+Chevrolet,EQUINOX EV D,Eléctrico,sin dato,Eléctrica
+Chevrolet,EQUINOX EV B,Eléctrico,sin dato,Eléctrica
+Chevrolet,ONIX A,Gasolina,L3,Manual
+Chevrolet,ONIX B,Gasolina,L3,Automática
+Chevrolet,ONIX C,Gasolina,L3,Manual
+Chevrolet,ONIX D,Gasolina,L3,Automática
+Chevrolet,ONIX E,Gasolina,L3,Automática
+Chevrolet,CORVETTE A,Gasolina,V8,Automática
+Chevrolet,CORVETTE C,Gasolina,V8,Automática
+Chevrolet,CORVETTE B,Gasolina,V8,Automática
+Chevrolet,CORVETTE F,Gasolina,V8,Automática
+Chevrolet,TAHOE P,Gasolina,V8,Automática
+Chevrolet,TRAVERSE B,Gasolina,L4,Automática
+Chevrolet,TAHOE C,Gasolina,V8,Automática
+Chevrolet,TAHOE B,Gasolina,V8,Automática
+Chevrolet,TAHOE D,Gasolina,V8,Automática
+Chevrolet,TAHOE G,Gasolina,V8,Automática
+Chevrolet,SUBURBAN C,Gasolina,V8,Automática
+Chevrolet,SUBURBAN B,Gasolina,V8,Automática
+Chevrolet,SUBURBAN G,Gasolina,V8,Automática
+Chevrolet,TAHOE A,Gasolina,V8,Automática
+Chevrolet,BRIGHTDROP 400 A,Eléctrico,sin dato,Eléctrica
+Chevrolet,BRIGHTDROP 400 B,Eléctrico,sin dato,Eléctrica
+Chevrolet,BRIGHTDROP 400 C,Eléctrico,sin dato,Eléctrica
+Chevrolet,BRIGHTDROP 600 A,Eléctrico,sin dato,Eléctrica
+Chevrolet,BRIGHTDROP 600 B,Eléctrico,sin dato,Eléctrica
+Chevrolet,BRIGHTDROP 600 C,Eléctrico,sin dato,Eléctrica
+Chevrolet,COLORADO A,Gasolina,L4,Automática
+Chevrolet,COLORADO C,Gasolina,L4,Automática
+Chevrolet,COLORADO D,Gasolina,L4,Automática
+Chevrolet,EXPRESS MAX A,Diesel,L4,Manual
+Chevrolet,CORVETTE J,Gasolina,V8,Automática
+Deepal,S07 BEV,Eléctrico,sin dato,Automática
+Deepal,S07 REEV,Híbrido,4 en línea,Automático
+Deepal,G318 REEV AWD,Híbrido,4 en línea,Automática
+Deepal,S05 BEV,Eléctrico,0,0
+Deepal,S05 REEV,Híbrido,4 en línea,Mecánica
+Dodge,ATTITUDE (SXT),Gasolina,4 EN LINEA,Dct
+Dodge,ATTITUDE (SPORT),Gasolina,4 EN LINEA,Dct
+Dodge,ATTITUDE (GT),Gasolina,4 EN LINEA,Dct
+Dodge,"DURANGO (GT, GT PLUS)",Gasolina,6 EN V,Automatico
+Dodge,DURANGO (SXT),Gasolina,6 EN V,Automatico
+Dodge,DURANGO (PURSUIT),Gasolina,6 EN V,Automatico
+Dodge,DURANGO (PURSUIT),Gasolina,8 EN V,Automatico
+Dodge,DURANGO (RT),Gasolina,8 EN V,Automatico
+Dodge,DURANGO (SRT HELLCAT),Gasolina,8 EN V,Automatico
+Dodge,DURANGO (SRT),Gasolina,8 EN V,Automatico
+Dodge,"JOURNEY (SXT, SPORT)",Gasolina,4 EN LINEA,Automatico
+Dodge,JOURNEY (GT),Gasolina,4 EN LINEA,Automatico
+Fiat,PULSE (ABARTH),Gasolina,4 EN LINEA,Automatico
+Fiat,"ARGO (DRIVE, DRIVE PLUS, DRIVE PLUS S-DESIGN)",Gasolina,4 EN LINEA,Manual
+Fiat,ARGO (TREKKING),Gasolina,4 EN LINEA,Manual
+Fiat,"ARGO (DRIVE PLUS, DRIVE PLUS S-DESIGN)",Gasolina,4 EN LINEA,Cvt
+Fiat,ARGO (TREKKING),Gasolina,4 EN LINEA,Cvt
+Fiat,ARGO SEDAN (DRIVE),Gasolina,4 EN LINEA,Manual
+Fiat,"ARGO SEDAN (DRIVE, PRECISION)",Gasolina,4 EN LINEA,Cvt
+Fiat,"MOBI (LIKE, TREKKING)",Gasolina,4 EN LINEA,Manual
+Fiat,FASTBACK (AUDACE),Gasolina,4 EN LINEA,Automatico
+Fiat,FASTBACK (IMPETUS),Gasolina,4 EN LINEA,Automatico
+Fiat,PULSE (DRIVE),Gasolina,4 EN LINEA,Manual
+Fiat,"PULSE (DRIVE, AUDACE)",Gasolina,4 EN LINEA,Cvt
+Fiat,PULSE (IMPETUS),Gasolina,4 EN LINEA,Cvt
+Ford,RANGER 3.0L,Gasolina,6V,Automatica
+Ford,RANGER 2.3L 4X4,Gasolina,4I,Automatica
+Ford,TRANSIT CUSTOM 2.0L,Diesel,4I,Manual
+Ford,POLICE INTERCEPTOR 3.3L HEV,Gasolina,6V,Automatica
+Ford,POLICE INTERCEPTOR 3.3L AWD,Gasolina,6V,Automatica
+Ford,BRONCO 2.3L 4WD,Gasolina,4I,Automatica
+Ford,BRONCO 2.7L AWD,Gasolina,6V,Automatica
+Ford,BRONCO 3.0L AWD,Gasolina,6V,Automatica
+Ford,BRONCO SPORT 1.5L 4WD,Gasolina,3I,Automatica
+Ford,BRONCO SPORT 2.0L 4WD,Gasolina,4I,Automatica
+Ford,ESCAPE 2.5L AWD HEV,Gasolina,4I,Automatica
+Ford,ESCAPE 2.5L FWD HEV,Gasolina,4I,Automatica
+Ford,EXPEDITION 3.5L 4X2,Gasolina,6V,Automatica
+Ford,EXPEDITION 3.5L 4X4,Gasolina,6V,Automatica
+Ford,EXPEDITION 3.5L TIMBERLINE 4X4,Gasolina,6V,Automatica
+Ford,EXPLORER 2.3L,Gasolina,4I,Automatica
+Ford,EXPLORER 3.0L,Gasolina,6V,Automatica
+Ford,F 150 2.7L 4X2,Gasolina,6V,Automatica
+Ford,F 150 2.7L 4X4,Gasolina,6V,Automatica
+Ford,F 150 3.3 4X2,Gasolina,6V,Automatica
+Ford,F 150 3.3 4X4,Gasolina,6V,Automatica
+Ford,F 150 3.5L 4X2,Gasolina,6V,Automatica
+Ford,F 150 3.5L 4X4,Gasolina,6V,Automatica
+Ford,F 150 3.5L HEV 4X2,Gasolina,6V,Automatica
+Ford,F 150 3.5L HEV 4X4,Gasolina,6V,Automatica
+Ford,F 150 3.5L HIGH OUTPUT,Gasolina,6V,Automatica
+Ford,F 150 5.0L 4X2,Gasolina,8V,Automatica
+Ford,F 150 5.0L 4X4,Gasolina,8V,Automatica
+Ford,F 150 5.2L,Gasolina,8V,Automatica
+Ford,MAVERICK 2.0L AWD,Gasolina,4I,Automatica
+Ford,MAVERICK 2.0L FWD,Gasolina,4I,Automatica
+Ford,MAVERICK 2.5L HEV,Gasolina,4I,Automatica
+Ford,MUSTANG 2.3L,Gasolina,4I,Automatica
+Ford,MUSTANG 5.0L,Gasolina,8V,Manual
+Ford,MUSTANG 5.0L DARKHORSE,Gasolina,8V,Manual
+Ford,MUSTANG MACH E,Eléctrico,sin dato,Automatica
+Ford,RANGER 2.0L,Diesel,4I,Automatica
+Ford,RANGER 2.3L 4X2,Gasolina,4I,Automatica
+Ford,TERRITORY 1.8L,Gasolina,4I,Automatica
+Gac,AION UT,Eléctrico,sin dato,Automatica
+Geely,EMGRAND GF,Gasolina,4 L,At
+Geely,EMGRAND GC,Gasolina,4 L,Mt
+Geely,EMGRAND GL AT,Gasolina,4 L,At
+Geely,CITYRAY GC,Gasolina,4 L,Dct
+Geely,CITYRAY GL,Gasolina,4 L,Dct
+Geely,CITYRAY GK,Gasolina,4 L,Dct
+Geely,CITYRAY GF,Gasolina,4 L,Dct
+Geely,EMGRAND GL MT,Gasolina,4 L,Mt
+Gmc,SIERRA F,Gasolina,V8,Automática
+Gmc,SIERRA C,Gasolina,V8,Automática
+Gmc,SIERRA E,Gasolina,V8,Automática
+Gmc,SIERRA G,Gasolina,V8,Automática
+Gmc,YUKON D,Gasolina,V8,Automática
+Gmc,YUKON A,Gasolina,V8,Automática
+Gmc,YUKON XL B,Gasolina,V8,Automática
+Gmc,TERRAIN E,Gasolina,L4,Automática
+Gmc,ACADIA D,Gasolina,L4,Automática
+Gmc,ACADIA C,Gasolina,L4,Automática
+Gmc,ACADIA G,Gasolina,L4,Automática
+Gmc,HUMMER EV SUV A,Eléctrico,sin dato,Eléctrica
+Gmc,HUMMER EV PICKUP B,Eléctrico,sin dato,Eléctrica
+Gmc,HUMMER EV SUV C,Eléctrico,sin dato,Eléctrica
+Gmc,HUMMER EV PICKUP D,Eléctrico,sin dato,Eléctrica
+Gmc,CANYON E,Gasolina,L4,Automática
+Gmc,CANYON D,Gasolina,L4,Automática
+Honda,I STYLE,Gasolina,4L,Cvt
+Honda,SPORT HEV,Gasolina,4L,E-Cvt
+Honda,TOURING HEV,Gasolina,4L,E-Cvt
+Honda,TURBO,Gasolina,4L,Cvt
+Honda,TURBO PLUS,Gasolina,4L,Cvt
+Honda,SPORT TOURING HEV,Gasolina,4L,E-Cvt
+Honda,TOURING HEV,Gasolina,4L,E-Cvt
+Honda,TOURING,Gasolina,4L,Cvt
+Honda,SPORT CVT,Gasolina,4L,Cvt
+Honda,TOURING CVT,Gasolina,4L,Cvt
+Honda,PRIME CVT,Gasolina,4L,Cvt
+Honda,UNIQ,Gasolina,4L,Cvt
+Honda,TOURING,Gasolina,4L,Cvt
+Honda,SPORT,Gasolina,4L,Cvt
+Honda,TOURING,Gasolina,4L,Cvt
+Honda,UNIQ,Gasolina,4L,Cvt
+Honda,BLACK EDITION,Gasolina,V6,6At
+Honda,TOURING,Gasolina,V6,9At
+Honda,TOURING,Gasolina,V6,10At
+Honda,BLACK EDITION,Gasolina,V6,10At
+Honda,TOURING HEV,Gasolina,4L,Cvt
+Honda,PRIME,Gasolina,4L,Cvt
+Honqi,HS3 1.5T,Gasolina,4 EN L,Automatica
+Honqi,HS3 2.0T,Gasolina,4 EN L,Automatica
+Honqi,H5 1.5T,Gasolina,4 EN L,Automatica
+Honqi,H5 2.0T,Gasolina,4 EN L,Automatica
+Honqi,H9 3.0L,Gasolina,6 EN V,Automatica
+Honqi,H9 2.0L,Gasolina,4 EN L,Automatica
+Honqi,HS5 2.0T,Gasolina,4 EN L,Automatica
+Honqi,EQM5 CA7000H0EVA,Eléctrico,sin dato,Automatica
+Honqi,E-HS9 E115E01,Eléctrico,sin dato,Automatica
+Honqi,E-HS9 E115E02,Eléctrico,sin dato,Automatica
+Honqi,E-HS9 E115E03,Eléctrico,sin dato,Automatica
+Honqi,E-HS9 E115E04,Eléctrico,sin dato,Automatica
+Hyundai,SANTA FE LIMITED TECH,Gasolina,4 L,Dtc
+Hyundai,TUCSON GLS,Gasolina,4 L,Automatica
+Hyundai,TUCSON GLS PREMIUM,Gasolina,4 L,Automatica
+Hyundai,TUCSON LIMITED TECH,Gasolina,4 L,Automatica
+Hyundai,ELANTRA HEV GLS PREMIUM,Híbrido,4 L,Dtc
+Hyundai,TUCSON HEV LIMITED,Híbrido,4 L,Automatica
+Hyundai,IONIQ 5 LIMITED TECH,Eléctrico,0 L,Automatica Secuencial
+Hyundai,SANTA FE HEV GLS PREMIUM/LIMITED TECH,Híbrido,4 L,Automatica
+Hyundai,IONIQ 5 N N,Eléctrico,0 L,Automatica Secuencial
+Hyundai,GRAND I10 GL,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GL MID,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GLS,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GL MID,Gasolina,4 L,Automatica
+Hyundai,GRAND I10 GLS,Gasolina,4 L,Automatica
+Hyundai,GRAND I10 GL,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GL MID,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GLS,Gasolina,4 L,Manual
+Hyundai,GRAND I10 GL MID,Gasolina,4 L,Automatica
+Hyundai,GRAND I10 GLS,Gasolina,4 L,Automatica
+Hyundai,HB20 GL TM,Gasolina,4 L,Manual
+Hyundai,HB20 GL MID TM,Gasolina,4 L,Manual
+Hyundai,HB20 GL TA,Gasolina,4 L,Automatica
+Hyundai,HB20 GL MID TA,Gasolina,4 L,Automatica
+Hyundai,HB20 GLS TA,Gasolina,4 L,Automatica
+Hyundai,HB20 GL TM,Gasolina,4 L,Manual
+Hyundai,HB20 GL MID TM,Gasolina,4 L,Manual
+Hyundai,HB20 GL TA,Gasolina,4 L,Automatica
+Hyundai,HB20 GL MID TA,Gasolina,4 L,Automatica
+Hyundai,HB20 GLS TA,Gasolina,4 L,Automatica
+Hyundai,ELANTRA GLS PREMIUM IVT,Gasolina,4 L,Ivt
+Hyundai,ELANTRA LIMITED TECH IVT,Gasolina,4 L,Ivt
+Hyundai,HYUNDAI PALISADE LIMITED TECH AT,Gasolina,6 V,Automatica
+Hyundai,CRETA GL TM,Gasolina,4 L,Manual
+Hyundai,CRETA GLS IVT,Gasolina,4 L,Ivt
+Hyundai,CRETA GLS PREMIUM,Gasolina,4 L,Ivt
+Hyundai,SANTA FE GLS PREMIUN,Gasolina,4 L,Dtc
+Infiniti,QX80 AT 3.5L R20,Gasolina,V6,At
+Infiniti,QX80 AT 3.5L R22,Gasolina,V6,At
+Infiniti,QX60 AT 3.5L,Gasolina,V6,At
+Infiniti,QX60 AT 3.5L 4WD,Gasolina,V6,At
+Infiniti,QX50 2WD,Gasolina,4L,Cvt
+Infiniti,QX50 4WD,Gasolina,4L,Cvt
+Infiniti,QX55,Gasolina,4L,Cvt
+Jaguar,XE,Gasolina,4 en Linea,Automatica
+Jaguar,XE,Gasolina,4 en Linea,Automatica
+Jaguar,XF,Gasolina,4 en Linea,Automatica
+Jaguar,XF,Gasolina,4 en Linea,Automatica
+Jaguar,F TYPE,Gasolina,4 en Linea,Automatica
+Jaguar,F TYPE,Gasolina,8 en V,Automatica
+Jaguar,F TYPE,Gasolina,8 en V,Automatica
+Jaguar,F PACE,Gasolina,4 en Linea,Automatica
+Jaguar,F PACE PHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Jaguar,F PACE MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Jaguar,F PACE MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Jaguar,F PACE,Gasolina,8 en V,Automatica
+Jaguar,E PACE PHEV,Gasolina/Eléctrico,3 en Linea,Automatica
+Jaguar,E PACE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Jaguar,E PACE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Jaguar,E PACE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Jaguar,F-TYPE 575PS,Gasolina,8 en V,Automatica
+Jaguar,F-PACE 404PS,Gasolina,4 en linea,Automatica
+Jaguar,F-PACE 550PS,Gasolina,8 en V,Automatica
+Jaguar,F-PACE 575PS,Gasolina,8 en V,Automatica
+Jaguar,F-PACE 250PS,Gasolina,4 en linea,Automatica
+Jaguar,JAGUAR XF 300PS,Gasolina,4 en linea,Automatica
+Jaguar,JAGUAR XF 250PS,Gasolina,4 en linea,Automatica
+Jaguar,F-PACE 340PS,Gasolina,6 en linea,Automatica
+Jaguar,F-PACE 400PS,Gasolina,6 en linea,Automatica
+Jetour,JETOUR T2 I-DM 1.5T PHEV,Híbrido,4 EN L,Dht
+Jetour,JETOUR T2 2.0T ISEM / 2.0T STARGAZER,Gasolina,4 EN L,Dct
+Jetour,JETOUR T2 1.5T + 7DCT VOFON,Gasolina,4 EN L,Dct
+Jetour,JETOUR DASHING 1.6T +7DCT VT02,Gasolina,4 EN L,Dct
+Jetour,JETOUR DASHING 1.5T + 6DCT,Gasolina,4 EN L,Dct
+Jetour,JETOUR T1 2.0T + 8AT,Gasolina,4 EN L,Automática
+Jetour,JETOUR T1 1.5T + 7DCT,Gasolina,4 EN L,Dct
+Jeep,COMPASS (LATITUDE),Gasolina,4 EN LINEA,Automatico
+Jeep,COMPASS (LIMITED),Gasolina,4 EN LINEA,Automatico
+Jeep,COMPASS (HIGH ALTITUDE),Gasolina,4 EN LINEA,Automatico
+Jeep,"COMMANDER (LIMITED, OVERLAND)",Gasolina,4 EN LINEA,Automatico
+Jeep,GRAND CHEROKEE 4X2 (LIMITED),Gasolina,6 EN V,Automatico
+Jeep,GRAND CHEROKEE L 4X4 (LIMITED),Gasolina,6 EN V,Automatico
+Jeep,GRAND CHEROKEE L 4X4 (OVERLAND),Gasolina,6 EN V,Automatico
+Jeep,"GRAND CHEROKEE L 4X4 (SUMMIT RESERVE RIN 21"")",Gasolina,6 EN V,Automatico
+Jeep,WAGONEER L,Gasolina,6 EN LINEA,Automatico
+Jeep,GRAND WAGONEER L,Gasolina,6 EN LINEA,Automatico
+Jeep,RENEGADE (SPORT),Gasolina,4 EN LINEA,Automatico
+Jeep,RENEGADE (LATITUDE),Gasolina,4 EN LINEA,Automatico
+Jeep,"RENEGADE (LIMITED, LIMITED S)",Gasolina,4 EN LINEA,Automatico
+Jeep,JT (WILLYS),Gasolina,6 EN V,Automatico
+Jeep,"JT (SPORT, SPORT S)",Gasolina,6 EN V,Automatico
+Jeep,"JT (MOJAVE, RUBICON)",Gasolina,6 EN V,Automatico
+Jeep,WRANGLER (RUBICON) 2.0L,Gasolina,4 EN LINEA,Automatico
+Jeep,WRANGLER (UNLIMITED RUBICON) 2.0L,Gasolina,4 EN LINEA,Automatico
+Jeep,WRANGLER (RUBICON XTREME) 2.0L,Gasolina,4 EN LINEA,Automatico
+Jeep,WRANGLER (UNLIMITED RUBICON XTREME) 2.0L,Gasolina,4 EN LINEA,Automatico
+Jeep,"WRANGLER (RUBICON, UNLIMITED RUBICON)",Gasolina,6 EN V,Automatico
+Jeep,WRANGLER (RUBICON XTREME),Gasolina,6 EN V,Automatico
+Jeep,WRANGLER (UNLIMITED RUBICON XTREME),Gasolina,6 EN V,Automatico
+Land Rover,DISCOVERY SPORT PHEV**,Gasolina/Eléctrico,3 en Linea,Automatica
+Land Rover,DISCOVERY SPORT MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,DISCOVERY SPORT MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,DISCOVERY SPORT MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,DISCOVERY MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,VELAR,Gasolina,4 en Linea,Automatica
+Land Rover,VELAR PHEV**,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,VELAR MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,VELAR MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,RANGE ROVER SPORT MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,RANGE ROVER SPORT,Gasolina,8 en V,Automatica
+Land Rover,RANGE ROVER MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,RANGE ROVER MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,RANGE ROVER,Gasolina/Eléctrico,8 en V,Automatica
+Land Rover,DEFENDER 110,Gasolina,4 en Linea,Automatica
+Land Rover,DEFENDER 90 MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,DEFENDER 110 MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,DEFENDER 90,Gasolina,8 en V,Automatica
+Land Rover,DEFENDER 110,Gasolina,8 en V,Automatica
+Land Rover,DEFENDER 130 MHEV,Gasolina/Eléctrico,6 en Linea,Automatica
+Land Rover,EVOQUE PHEV**,Gasolina/Eléctrico,3 en Linea,Automatica
+Land Rover,EVOQUE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,EVOQUE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,EVOQUE MHEV,Gasolina/Eléctrico,4 en Linea,Automatica
+Land Rover,RANGE ROVER EVOQUE MHEV 2.0L 249PS,Gasolina,4 en linea,Automatica
+Land Rover,DISCOVERY SPORT MHEV 2.0L 249PS,Gasolina,4 en linea,Automatica
+Land Rover,RANGE ROVER EVOQUE PHEV 1.5L 309PS,Gasolina,3 en linea,Automatica
+Land Rover,RANGE ROVER PHEV 460,Gasolina,6 en linea,Automatica
+Land Rover,RANGE ROVER PHEV 550,Gasolina,6 en linea,Automatica
+Land Rover,RANGE ROVER SPORT PHEV 460,Gasolina,6 en linea,Automatica
+Land Rover,NEW RANGE ROVER 530 MHEV,Gasolina,8 en V,Automatica
+Land Rover,NEW RANGE ROVER SPORT 530 MHEV,Gasolina,8 en V,Automatica
+Land Rover,NEW RANGE ROVER 625 MHEV,Gasolina,8 en V,Automatica
+Land Rover,NEW RANGE ROVER SPORT 625 MHEV,Gasolina,8 en V,Automatica
+Land Rover,VELAR 250PS,Gasolina,4 en linea,Automatica
+Land Rover,VELAR 404PS,Gasolina,4 en linea,Automatica
+Land Rover,RANGE ROVER VELAR 340 PS,Gasolina,6 en linea,Automatica
+Land Rover,RANGE ROVER VELAR 400PS,Gasolina,6 en linea,Automatica
+Land Rover,LAND ROVER DISCOVERY 360 PS,Gasolina,6 en linea,Automatica
+Land Rover,LAND ROVER DEFENDER 90 300 PS,Gasolina,4 en linea,Automatica
+Land Rover,LAND ROVER DEFENDER 90 400 PS,Gasolina,6 en linea,Automatica
+Land Rover,LAND ROVER DEFENDER 90 525 PS,Gasolina,8 en V,Automatica
+Land Rover,LAND ROVER DEFENDER 110 300 PS,Gasolina,4 en linea,Automatica
+Land Rover,LAND ROVER DEFENDER 110 400 PS,Gasolina,6 en linea,Automatica
+Land Rover,LAND ROVER DEFENDER 110 525 PS,Gasolina,8 en V,Automatica
+Land Rover,LAND ROVER DEFENDER 130 400 PS,Gasolina,6 en linea,Automatica
+Land Rover,NEW RANGE ROVER,Gasolina,6 en linea,Automatica
+Land Rover,NEW RANGE ROVER SPORT,Gasolina,6 en linea,Automatica
+Land Rover,DISCOVERY SPORT MHEV 2.0L 200PS,Gasolina,4 en linea,Automatica
+Land Rover,RANGE ROVER EVOQUE MHEV 2.0L 200PS,Gasolina,4 en linea,Automatica
+Land Rover,DISCOVERY SPORT PHEV 1.5L 309PS,Gasolina,3 en linea,Automatica
+Lexus,GX550,Gasolina,6V,At
+Lexus,ES HIBRIDO 300,Híbrido,4L,Cvt
+Lexus,ES 350,Gasolina,6V,At
+Lexus,LS HIBRIDO 500,Híbrido,6V,Cvt
+Lexus,LX 700H HIBRIDO,Híbrido,6V,At
+Lexus,NX250,Gasolina,4L,At
+Lexus,NX250H HIBRIDO,Híbrido,4L,Cvt
+Lexus,UX300H HIBRIDO,Híbrido,4L,Cvt
+Lexus,IS300,Gasolina,4L,At
+Lexus,RX350,Gasolina,4L,At
+Lexus,RX350H HIBRIDO,Híbrido,4L,Cvt
+Lexus,RX500H HIBRIDO,Híbrido,4L,At
+Lexus,TX500 H HIBRIDO,Híbrido,4L,At
+Lexus,LC500,Gasolina,6V,At
+Lincoln,AVIATOR 3.0L AWD,Gasolina,6V,Automatica
+Lincoln,AVIATOR 3.0L RWD,Gasolina,6V,Automatica
+Lincoln,CORSAIR 2.0L,Gasolina,4I,Automatica
+Lincoln,CORSAIR 2.5L PHEV **,Gasolina,4I,Automatica
+Lincoln,NAUTILUS 2.0L FWD,Gasolina,4I,Automatica
+Lincoln,NAUTILUS 2.0 HEV,Gasolina,4l,Automatica
+Lincoln,NAVIGATOR 3.5L 4X4,Gasolina,6V,Automatica
+Mazda,MAZDA 3 HB I SPORT,Gasolina,4L,Automática
+Mazda,MAZDA 3 HB I GRAND TOURING,Gasolina,4L,Automática
+Mazda,MAZDA 3 HB SIGNATURE,Gasolina,4L,Automática
+Mazda,MAZDA CX-70 I GRAND TOURING,Gasolina,6L,Automática
+Mazda,MAZDA CX-30 I SPORT,Gasolina,4L,Automática
+Mazda,MAZDA CX-30 I GRAND TOURING,Gasolina,4L,Automática
+Mazda,MAZDA CX-30 SIGNATURE,Gasolina,4L,Automática
+Mazda,MAZDA CX-30 I,Gasolina,4L,Automática
+Mg,MG 3 HEV ELEGANCE,Híbrido,4 EN LINEA,At
+Mg,MG 3 COOL MT,Gasolina,4 EN LINEA,Mt
+Mg,MG 3 STYLE MT,Gasolina,4 EN LINEA,Mt
+Mg,MG 3 STYLE CVT,Gasolina,4 EN LINEA,Cvt
+Mg,MG 3 EXCITE CVT,Gasolina,4 EN LINEA,Cvt
+Mg,MG 3 HEV EXCITE,Híbrido,4 EN LINEA,At
+Mitsubishi,L200 GLX 4X2 2.4L 4CIL Gasolina,Gasolina,I4,5Mt
+Mitsubishi,L200 GLX 4X2 2.4L 4CIL Diesel,Diesel,I4,6Mt
+Mitsubishi,L200 GLS 4X4 2.4L 6AT Diesel,Diesel,I4,6At
+Mitsubishi,MIRAGE G4 GLS MT,Gasolina,I3,5Mt
+Mitsubishi,OUTLANDER SPORT,Gasolina,I4,Cvt
+Mitsubishi,MIRAGE G4 GLS AT,Gasolina,I3,Cvt
+Mitsubishi,MIRAGE G4 GLX AT,Gasolina,I3,Cvt
+Mitsubishi,MONTERO SPORT SE,Gasolina,V6,8At
+Mitsubishi,MONTERO SPORT SE PLUS,Gasolina,V6,8At
+Mitsubishi,XPANDER,Gasolina,I4,4At
+Mitsubishi,XPANDER CROSS,Gasolina,I4,4At
+Mitsubishi,OUTLANDER PHEV SE PLUS,Gasolina,I4,T/A
+Mitsubishi,OUTLANDER PHEV LIMITED,Gasolina,I4,T/A
+Mitsubishi,L200 GLX,Gasolina,I4,5Mt
+Mitsubishi,L200 GLS,Diesel,I4,6Mt
+Mitsubishi,L200 LIMITED,Diesel,I4,6At
+Mitsubishi,L200 GSR,Diesel,I4,6At
+Mitsubishi,MIRAGE G4 GLX MT,Gasolina,I3,5Mt
+Nissan,VERSA R16,Gasolina,4L,Cvt
+Nissan,VERSA R17,Gasolina,4L,Cvt
+Nissan,NP300 CABINA SENCILLA 4X2 MT,Gasolina,4L,Mt
+Nissan,FRONTIER DOBLE CABINA 4X2 MT,Gasolina,4L,Mt
+Nissan,FRONTIER DOBLE CABINA 4X2 MT,Gasolina,4L,Mt
+Nissan,FRONTIER DOBLE CABINA 4X2 AT,Gasolina,4L,At
+Nissan,FRONTIER DOBLE CABINA 4X4 AT,Gasolina,4L,At
+Nissan,FRONTIER DOBLE CABINA (DIESEL 4X4 MT),Diesel,4L,Mt
+Nissan,FRONTIER DOBLE CABINA (DIESEL 4X4 AT),Diesel,4L,At
+Nissan,NP300 CABINA SENCILLA (DIESEL 4X2 MT),Diesel,4L,Mt
+Nissan,Z,Gasolina,V6,Mt
+Nissan,Z,Gasolina,V6,At
+Nissan,SENTRA R16,Gasolina,4L,Mt
+Nissan,SENTRA R16,Gasolina,4L,Cvt
+Nissan,SENTRA R18,Gasolina,4L,Cvt
+Nissan,KICKS PLAY,Gasolina,4L,Mt
+Nissan,KICKS PLAY,Gasolina,4L,Cvt
+Nissan,KICKS EPKB PLAY,Gasolina,4L,Cvt
+Nissan,X-TRAIL 2ROW,Gasolina,4L,Mcvt
+Nissan,X-TRAIL 3ROW,Gasolina,4L,Mcvt
+Nissan,X-TRAIL E-POWER E-REV,E-Rev,3L,Rg
+Nissan,KICKS,Gasolina,4L,Cvt
+Nissan,MARCH,Gasolina,4L,Mt
+Nissan,MARCH,Gasolina,4L,At
+Nissan,V-DRIVE,Gasolina,4L,Mt
+Nissan,"FRONTIER V6 PRO-4X, T/A 4X4",Gasolina,V6,At
+Nissan,KICKS PLAY E-POWER E-REV,E-Rev,3L,Rg
+Nissan,VERSA,Gasolina,4L,Mt
+Peugeot,"2008 (ACTIVE, ALLURE, GT)",Gasolina,3 EN LINEA,Automatico
+Peugeot,"3008 (ACTIVE, ALLURE, GT)",Gasolina,4 EN LINEA,Automatico
+Peugeot,"3008 180HP (ALLURE, GT)",Gasolina,4 EN LINEA,Automatico
+Peugeot,"RIFTER (ALLURE, GT)",Gasolina,3 EN LINEA,Automatico
+Peugeot,PARTNER (MAXI),Gasolina,3 EN LINEA,Manual
+Peugeot,PARTNER RAPID,Gasolina,4 EN LINEA,Manual
+Porsche,CARRERA GTS CABRIOLET 3.6 LTS 541 HP PDK TRACCIÓN TRASERA,Híbrido,B6,Automatica
+Porsche,PORSCHE 911 CARRERA 3.0 LTS 394 HP PDK TRACCIÓN TRASERA,Gasolina,B6,Automatica
+Porsche,PORSCHE 911 CARRERA CABRIOLET 3.0 LTS 394 HP PDK TRACCIÓN TRASERA,Gasolina,B6,Automatica
+Porsche,E-HYBRID COUPE 3.0 LTS 470 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,COUPE 3.0 LTS 353 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,S 4.0 LTS 474 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,3.0 LTS 353 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,S COUPE 4.0 LTS 474 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,TURBO GT 4.0 LTS 659 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,E-HYBRID COUPE 3.0 LTS 470 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,COUPE 3.0 LTS 353 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,3.0 LTS 353 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V6,Automatica
+Porsche,S 4.0 LTS 474 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,S COUPE 4.0 LTS 474 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,TURBO GT 4.0 LTS 659 HP TIPTRONIC S TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,GT3 TOURING PACKAGE 4.0 LTS 510 HP MT,Gasolina,B6,Manual
+Porsche,GT3 4.0 LTS 510 HP MT,Gasolina,B6,Manual
+Porsche,PORSCHE 911 GT3 4.0L 510 HP PDK TRACCIÓN TRASERA,Gasolina,B6,Automatica
+Porsche,PORSCHE 911 GT3 TOURING PACKAGE 4.0L 510 HP PDK TRACCIÓN TRASERA,Gasolina,B6,Automatica
+Porsche,50 AÑOS TURBO,Gasolina,B6,Automatica
+Porsche,TURBO 3.8 LTS 580 HP PDK TRACCION INTEGRAL,Gasolina,B6,Automatica
+Porsche,GT3 RS 4.0 LTS 525 HP PDK TRACCION TRASERA,Gasolina,B6,Automatica
+Porsche,GTS 4.0 LTS 500 HP PDK TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,718 CAYMAN GT4 RS 4.0 LTS 500HP,Gasolina,B4,Automatica
+Porsche,CARRERA 4 GTS CABRIOLET 3.6 LTS 541 HP PDK TRACCIÓN INTEGRAL,Híbrido,B6,Automatica
+Porsche,CARRERA 4 GTS 3.6 LTS 541 HP PDK TRACCIÓN INTEGRAL,Híbrido,B6,Automatica
+Porsche,TARGA 4 GTS 3.6 LTS 541 HP PDK TRACCIÓN INTEGRAL,Híbrido,B6,Automatica
+Porsche,CARRERA GTS 3.6 LTS 541 HP PDK TRACCIÓN TRASERA,Híbrido,B6,Automatica
+Porsche,MACAN T 2.0 LTS 265 HP PDK TRACCION INTEGRAL,Gasolina,4*,Automatica
+Porsche,MACAN GTS 2.9 LTS 440 HP PDK TRACCION INTEGRAL,Gasolina,V6,Automatica
+Porsche,MACAN S 2.9 LTS 380 HP PDK TRACCION INTEGRAL,Gasolina,V6,Automatica
+Porsche,TURBO S E-HYBRID 4.0 LTS 782 HP PDK TRACCIÓN INTEGRAL,Híbrido,V8,Automatica
+Porsche,TURBO E-HYBRID 4.0 LTS 739 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V8,Automatica
+Porsche,TURBO E-HYBRID COUPE 4.0 LTS 739 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V8,Automatica
+Porsche,TURBO E-HYBRID 4.0 LTS 739 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V8,Automatica
+Porsche,TURBO E-HYBRID COUPE 4.0 LTS 739 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V8,Automatica
+Porsche,PANAMERA 2.9 LTS 353 HP PDK TRACCIÓN TRASERA,Gasolina,V6,Automatica
+Porsche,CAYMAN GTS 4.0 LTS 400 HP PDK TRACCION TRASERA,Gasolina,B6,Automatica
+Porsche,BOXSTER GTS 4.0 LTS 400 HP PDK TRACCION TRASERA,Gasolina,B6,Automatica
+Porsche,PANAMERA TURBO E-HYBRID 4.0 LTS 680 HP PDK TRACCIÓN INTEGRAL,Gasolina,V8,Automatica
+Porsche,2.0 LTS 265 HP PDK TRACCION INTEGRAL,Gasolina,4*,Automatica
+Porsche,S E-HYBRID 3.0 LTS 519 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,S E-HYBRID COUPE 3.0 LTS 519 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,S E-HYBRID 3.0 LTS 519 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,S E-HYBRID COUPE 3.0 LTS 519 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,E-HYBRID 3.0 LTS 470 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,E-HYBRID 3.0 LTS 470 HP TIPTRONIC S TRACCIÓN INTEGRAL,Híbrido,V6,Automatica
+Porsche,STYLE EDITION 2.0 LTS 300 HP PDK TRACCIÓN TRASERA,Gasolina,B4,Automatica
+Ram,700 LARAMIE CREW CAB 1.0L,Gasolina,3 EN LINEA,Cvt
+Ram,700 TRADESMAN REG CAB,Gasolina,4 EN LINEA,Manual
+Ram,"700 (TRADESMAN, BIGHORN) CREW CAB",Gasolina,4 EN LINEA,Manual
+Ram,"700 (BIGHORN, LARAMIE) CREW CAB",Gasolina,4 EN LINEA,Cvt
+Ram,1200 TRADESMAN REGULAR CAB 2.4L 4X2,Gasolina,4 EN LINEA,Manual
+Ram,1200 TRADESMAN CREW CAB 2.4L 4X2,Gasolina,4 EN LINEA,Manual
+Ram,1200 BIGHORN 2.4L 4X2,Gasolina,4 EN LINEA,Automatico
+Ram,1200 LARAMIE 2.4L 4X4,Gasolina,4 EN LINEA,Automatico
+Ram,1500 TRADESMAN CREW CAB 3.6L 4X2,Gasolina,6 EN V,Automatico
+Ram,"1500 (TRADESMAN, BIG HORN) CREW CAB 3.6L 4X4",Gasolina,6 EN V,Automatico
+Ram,1500 SO TRADESMAN CREW CAB 3.0L 4X2,Gasolina,6 EN LINEA,Automatico
+Ram,1500 SO TRADESMAN CREW CAB 3.0L 4X4,Gasolina,6 EN LINEA,Automatico
+Ram,1500 SO LARAMIE SPORT CREW CAB 3.0L 4X4,Gasolina,6 EN LINEA,Automatico
+Ram,"1500 HO (LIMITED LONGHORN, LIMITED, TUNGSTEN) CREW CAB 3.0L 4X4",Gasolina,6 EN LINEA,Automatico
+Ram,1500 RHO CREW CAB 3.0L 4X4,Gasolina,6 EN LINEA,Automatico
+Renault,STEPWAY MT 5,Gasolina,4 EN LINEA,Manual
+Renault,KARDIAN DCT,Gasolina,3 EN LINEA,Dct
+Renault,LOGAN MT 5,Gasolina,4 EN LINEA,Manual
+Renault,LOGAN CVT,Gasolina,4 EN LINEA,Cvt
+Renault,DUSTER MT,Gasolina,4 EN LINEA,Manual
+Renault,DUSTER CVT,Gasolina,4 EN LINEA,Cvt
+Renault,KANGOO MT 5,Gasolina,4 EN LINEA,Manual
+Renault,KOLEOS CVT,Gasolina,4 EN LINEA,Cvt
+Renault,OROCH MT 6,Gasolina,4 EN LINEA,Manual
+Renault,OROCH CVT,Gasolina,4 EN LINEA,Cvt
+Renault,MASTER DIESEL L2H2 MT 6,Diesel,4 EN LINEA,Manual
+Renault,MASTER DIESEL L3H2 MT 6,Diesel,4 EN LINEA,Manual
+Renault,KWID MT 5,Gasolina,3 EN LINEA,Manual
+Renault,KARDIAN MT 5,Gasolina,4 EN LINEA,Manual
+Renault,STEPWAY CVT,Gasolina,4 EN LINEA,Cvt
+Renault,ARKANA DCT,Gasolina,4 EN LINEA,Dct
+Seat,CUPRA FORMENTOR 1.5 TSI 150HP MHEV DSG 7 VEL. FRONT,Gasolina,4*,Automatica
+Seat,SEAT IBIZA 1.5L TSI DSG,Gasolina,4*,Automatica
+Seat,SEAT IBIZA 1.0 TSI 115 HP MANUAL TRACCION DELANTERA,Gasolina,3*,Manual
+Seat,"SEAT IBIZA, 1.6 MPI 110 HP MAN TRACCION DELANTERA",Gasolina,4*,Manual
+Seat,SEAT ARONA 1.6 MPI 110 HP AUT TRACCION DELANTERA,Gasolina,4*,Automatica
+Seat,ATECA 1.4 TSI 150HP TSI AUT TRACCION DELANTERA,Gasolina,4*,Automatica
+Seat,CUPRA FORMENTOR 2.0 TSI 333HP DSG 7 VEL. TRACCION 4DRIVE,Gasolina,4*,Automatica
+Seat,CUPRA ATECA 2.0 TSI 300HP DSG TRACCION 4DRIVE,Gasolina,4*,Automatica
+Seat,CUPRA TERRAMAR 2.0 TSI 265 HP DSG 7 VEL. TRACCION 4 DRIVE,Gasolina,4*,Automatica
+Seat,CUPRA LEON 2.0 TSI 300 HP DSG 7 VEL. TRACCION DELANTERA,Gasolina,4*,Automatica
+Seat,CUPRA TERRAMAR 1.4 TSI 150HP DSG 7 VEL. FRONT,Gasolina,4*,Automatica
+Seat,SEAT IBIZA 1.6 MPI 110HP AUT TRACCION DELANTERA,Gasolina,4*,Automatica
+Seat,SEAT LEON 1.4 TSI 150HP AUT TRACCION DELANTERA,Gasolina,4*,Automatica
+Soueast,SOUEAST S07 1.6T,Gasolina,4 EN L,Dct
+Soueast,SOUEAST S09 2.0T 145KW,Gasolina,4 EN L,Dct
+Soueast,SOUEAST S09 1.6T,Gasolina,4 EN L,Dct
+Soueast,SOUEAST S07 1.5T,Gasolina,4 EN L,Automática
+Soueast,SOUEAST S09 2.0T 145KW AWD-L,Gasolina,4 EN L,Dct
+Soueast,SOUEAST S09 2.0T 180KW AWD-H,Gasolina,4 EN L,Dct
+Soueast,SOUEAST S06 DM 1.5T PHEV,Híbrido,4 EN L,Automática
+Suzuki,SWIFT 1.2L BOOSTERGREEN (ISG MHEV) CVT,Híbrido,3L,Automatica
+Suzuki,SWIFT 1.2L BOOSTERGREEN (ISG MHEV) MT,Híbrido,3L,Manual
+Suzuki,GRAND VITARA 1.5L BOOSTERGREEN (ISG MILD-HYBRID) AT,Híbrido,4L,Automatica
+Suzuki,ERTIGA XL7 1.5L AT BOOSTERGREEN (ISG MILD HYBRID),Híbrido,4L,Automatica
+Suzuki,SWIFT SPORT 1.4L BOOSTERJET (DITC) TM,Gasolina,4L,Manual
+Suzuki,SWIFT SPORT 1.4L BOOSTERJET (DITC) TA,Gasolina,4L,Automatica
+Suzuki,FRONX 1.5L AT 2WD BOOSTERGREEN (ISG MILD-HYBRID),Híbrido,4L,Aut0Matica
+Suzuki,BALENO 1.5L AT,Gasolina,4L,Automatica
+Suzuki,ERTIGA 1.5L AT BOOSTERGREEN (ISG MILD-HYBRID),Híbrido,4L,Automatica
+Suzuki,JIMNY 1.5L MT 4WD,Gasolina,4L,Manual
+Suzuki,JIMNY 1.5L AT 4WD,Gasolina,4L,Automatica
+Suzuki,JIMNY 1.5L 5 PTAS AT,Gasolina,4L,Automatica
+Suzuki,JIMNY 1.5L 5 PTAS MT,Gasolina,4L,Manual
+Suzuki,ERTIGA 1.5L MT BOOSTERGREEN (ISG MILD-HYBRID),Híbrido,4L,Manual
+Toyota,SEQUOIA HIBRIDO 2WD,Híbrido,6V,At
+Toyota,COROLLA,Gasolina,4L,Cvt
+Toyota,COROLLA HIBRIDO,Híbrido,4L,Cvt
+Toyota,SUPRA AT,Gasolina,6L,At
+Toyota,SUPRA MT,Gasolina,6L,Mt
+Toyota,HIACE DIESEL,Diesel,4L,Mt
+Toyota,HIACE 3.5L,Gasolina,6V,Mt
+Toyota,HILUX DIESEL MT,Diesel,4L,Mt
+Toyota,HILUX DIESEL AT,Diesel,4L,At
+Toyota,HILUX GASOLINA,Gasolina,4L,Mt
+Toyota,CAMRY HIBRIDO,Híbrido,4L,Cvt
+Toyota,SIENNA HIBRIDO,Híbrido,4L,Cvt
+Toyota,YARIS SEDAN MT,Gasolina,4L,Mt
+Toyota,YARIS SEDAN CVT,Gasolina,4L,Cvt
+Toyota,COROLLA CROSS,Gasolina,4L,Cvt
+Toyota,COROLLA CROSS HIBRIDO,Híbrido,4L,Cvt
+Toyota,HIGHLANDER HIBRIDO,Híbrido,4L,Cvt
+Toyota,YARIS HB MT,Gasolina,4L,Mt
+Toyota,YARIS HB CVT,Gasolina,4L,Cvt
+Toyota,PRIUS HIBRIDO,Híbrido,4L,Cvt
+Toyota,RAIZE MT,Gasolina,3L,Mt
+Toyota,RAIZE CVT,Gasolina,3L,Cvt
+Toyota,AVANZA MT,Gasolina,4L,Mt
+Toyota,AVANZA CVT,Gasolina,4L,Cvt
+Toyota,RAV4,Gasolina,4L,At
+Toyota,RAV4 HIBRIDO,Híbrido,4L,Cvt
+Toyota,TUNDRA HIBRIDO,Híbrido,6V,At
+Toyota,TACOMA,Gasolina,4L,At
+Toyota,TACOMA HIBRIDO,Híbrido,4L,At
+Toyota,4RUNNER HIBRIDO,Híbrido,4L,At
+Toyota,GR YARIS,Gasolina,3L,Mt
+Toyota,SEQUOIA HIBRIDO 4WD,Híbrido,6V,At
+Vizeon,L1H1-42,Eléctrico,sin dato,Automática
+Vizeon,L1H2-42,Eléctrico,sin dato,Automática
+Vizeon,L2H2-53,Eléctrico,sin dato,Automática
+Vizeon,L2H2-42,Eléctrico,sin dato,Automática
+Vizeon,L1H2-53,Eléctrico,sin dato,Automática
+Volvo,EX40,Eléctrico,sin dato,Automática
+Volvo,EC40,Eléctrico,sin dato,Automática
+Volvo,EX90,Eléctrico,sin dato,Automática
+Volvo,XC90,Híbrido,4L,Automática
+Volvo,EX30,Eléctrico,sin dato,Automática
+Volvo,XC60,Híbrido,4L,Automática
+Volkswagen,"VIRTUS 1,0 TSI 114 HP TIPTRONIC",Gasolina,3*,Automatica
+Volkswagen,JETTA 1.4 TSI 110 KW TIPTRONIC,Gasolina,4*,Automatica
+Volkswagen,VOLKSWAGEN TERAMONT PEAK EDITION 2.0 LTS TSI TIPTRONIC TRACCION 4 MOTION,Gasolina,4*,Automatica
+Volkswagen,VOLKSWAGEN TERAMONT 2.0 LTS TSI TIPTRONIC TRACCION 4 MOTION,Gasolina,4*,Automatica
+Volkswagen,VOLKSWAGEN CROSS SPORT 2.0 TSI 269 HP,Gasolina,4*,Automatica
+Volkswagen,VOLKSWAGEN TERAMONT 2.0 LTS TSI TIPTRONIC TRACCION DELANTERA,Gasolina,4*,Automatica
+Volkswagen,"GOLF GTI 2,0 LTS DSG TRAC. DELANTERA",Gasolina,4*,Automatica
+Volkswagen,TAIGUN 1.6 LTS TIPTRONIC,Gasolina,4*,Automatica
+Volkswagen,"TIGUAN 1,4L TSI 150HP DSG",Gasolina,4*,Automatica
+Volkswagen,VIRTUS 1.6L 110HP TIPTRONIC,Gasolina,4*,Automatica
+Volkswagen,JETTA GLI 2.0 TFSI 169 KW DSG,Gasolina,4*,Automatica
+Volkswagen,VIRTUS 1.6L 110HP MANUAL,Gasolina,4*,Manual
+Volkswagen,SAVEIRO 1.6L MANUAL,Gasolina,4*,Manual
+Volkswagen,POLO 1.6 MPI MANUAL,Gasolina,4*,Manual
+Volkswagen,TAOS 1.4L TSI 150 HP AUTOMATICA,Gasolina,4*,Automatica
+Volkswagen,TAIGUN 1.6L MPI MANUAL,Gasolina,4*,Manual
+Volkswagen,POLO 1.6 MPI MANUAL,Gasolina,4*,Manual
+Volkswagen,TAIGUN 1.0L TSI 114 HP TIPTRONIC,Gasolina,3*,Automatica
+Volkswagen,POLO 1.0 TSI AUTOMATICO,Gasolina,3*,Automatica
+Volkswagen Comerciales,CRAFTER 3.5TON MWB CHASIS 140HP MANUAL 6 VEL,Diesel,4*,Manual
+Volkswagen Comerciales,CRAFTER 3.5TON MWB/LWB CARGO VAN 140HP MANUAL 6 VEL,Diesel,4*,Manual
+Volkswagen Comerciales,TRANSPORTER CARGO VAN 2.0L TDI 81KW MANUAL,Diesel,4*,Manual
+Yudo,YUDO3,Eléctrico,NO APLICA,Automatica

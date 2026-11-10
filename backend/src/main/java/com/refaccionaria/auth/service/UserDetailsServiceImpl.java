@@ -24,6 +24,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         var authorities = new ArrayList<SimpleGrantedAuthority>();
         appUser.getRoles().forEach(role -> {
             authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getName().toUpperCase()));
+            // Keeps the legacy ADMINISTRADOR role compatible with the standard ROLE_ADMIN policy.
+            if ("ADMINISTRADOR".equalsIgnoreCase(role.getName())) {
+                authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+            }
             role.getPermissions().forEach(permission -> authorities.add(new SimpleGrantedAuthority("PERM_" + permission)));
         });
         return User.withUsername(appUser.getEmail())

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tsung SYSTEM "/usr/share/tsung/tsung-1.0.dtd">
+<tsung loglevel="notice" version="1.0">
+  <clients>
+    <client host="localhost" use_controller_vm="true" maxusers="30"/>
+  </clients>
+
+  <servers>
+    <server host="localhost" port="8081" type="tcp"/>
+  </servers>
+
+  <!-- Carga progresiva, segura para el laboratorio local. -->
+  <load>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="60" unit="second">
+      <users arrivalrate="2" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="60" unit="second">
+      <users arrivalrate="3" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <sessions>
+    <session name="flujo-consulta-autenticado" probability="100" type="ts_http">
+      <transaction name="perfil_autenticado">
+        <request>
+          <http url="/api/auth/me" method="GET" version="1.1">
+            <http_header name="Authorization" value="Bearer REEMPLAZAR_CON_JWT_DE_PRUEBAS"/>
+          </http>
+        </request>
+      </transaction>
+      <thinktime value="1" random="true"/>
+
+      <transaction name="catalogo_marcas">
+        <request>
+          <http url="/api/v1/vehiculos/marcas" method="GET" version="1.1">
+            <http_header name="Authorization" value="Bearer REEMPLAZAR_CON_JWT_DE_PRUEBAS"/>
+          </http>
+        </request>
+      </transaction>
+      <thinktime value="1" random="true"/>
+
+      <transaction name="clientes_por_taller">
+        <request>
+          <http url="/api/v1/clientes?tallerId=1&amp;page=0&amp;size=10&amp;sortBy=nombre&amp;sortDir=asc" method="GET" version="1.1">
+            <http_header name="Authorization" value="Bearer REEMPLAZAR_CON_JWT_DE_PRUEBAS"/>
+          </http>
+        </request>
+      </transaction>
+      <thinktime value="1" random="true"/>
+
+      <transaction name="ficha_vehiculo">
+        <request>
+          <http url="/api/v1/vehiculos/ficha?id=1" method="GET" version="1.1">
+            <http_header name="Authorization" value="Bearer REEMPLAZAR_CON_JWT_DE_PRUEBAS"/>
+          </http>
+        </request>
+      </transaction>
+    </session>
+  </sessions>
+</tsung>

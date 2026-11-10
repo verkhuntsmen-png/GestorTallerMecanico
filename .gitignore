@@ -25,3 +25,12 @@ frontend/node_modules/
 *.iml
 .DS_Store
 Thumbs.db
+
+# Resultados locales de Wapiti y Tsung
+/data/
+/gnuplot_scripts/
+/images/
+/reports/
+/style/
+/graph.html
+/report.html
